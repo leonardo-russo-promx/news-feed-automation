@@ -40,7 +40,7 @@ jobs:
             git fetch origin digest-state
             git worktree add --detach state-branch origin/digest-state
           else
-            git worktree add --orphan digest-state state-branch
+            git worktree add --orphan -b digest-state state-branch
           fi
           mkdir -p state-branch/state state-branch/archive
       - name: Run digest
