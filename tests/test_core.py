@@ -393,3 +393,14 @@ def test_ai_output_is_stripped_before_reaching_items() -> None:
     result = asyncio.run(review_item(item, FakeAI()))
     assert result.ai_summary == "Plain text"
     assert result.action_reason == "Because"
+
+def test_strip_html_keeps_plain_text_around_tags() -> None:
+    from digest.ai.sanitize import strip_html
+
+    raw = (
+        '<h2 class="t">Heading</h2> Plain text stays. <a href="https://x.test?a=1&b=2">Link</a>'
+        " and 1 < 2 > 0, a<3, <!-- hidden --> <style-guide>kept</style-guide> <br/>end"
+    )
+    assert strip_html(raw) == "Heading Plain text stays. Link and 1 < 2 > 0, a<3,  kept end"
+    assert strip_html("no tags at all") == "no tags at all"
+    assert strip_html("x < y and z > w") == "x < y and z > w"

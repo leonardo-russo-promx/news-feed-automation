@@ -4,12 +4,17 @@ import re
 from html import unescape
 
 URL_PATTERN = re.compile(r"(?i)\b(?:https?://|www\.)\S+")
-BLOCK_PATTERN = re.compile(r"(?is)<(script|style)\b[^>]*>.*?</\1\s*>")
-TAG_PATTERN = re.compile(r"</?[A-Za-z!][^>]*>")
+BLOCK_PATTERN = re.compile(r"(?is)<(script|style)(?=[\s/>])[^<>]*>.*?</\1\s*>")
+COMMENT_PATTERN = re.compile(r"(?s)<!--.*?-->")
+ATTRIBUTE = r"""\s+[A-Za-z_:][-\w:.]*(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s"'<>=`]+))?"""
+TAG_PATTERN = re.compile(
+    rf"</?[A-Za-z][A-Za-z0-9-]*(?:{ATTRIBUTE})*\s*/?>|<![A-Za-z][^<>]*>"
+)
 
 
 def strip_html(value: str) -> str:
-    text = BLOCK_PATTERN.sub("", value)
+    text = COMMENT_PATTERN.sub("", value)
+    text = BLOCK_PATTERN.sub("", text)
     text = TAG_PATTERN.sub("", text)
     return unescape(text)
 
