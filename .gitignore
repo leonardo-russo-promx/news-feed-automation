@@ -6,3 +6,5 @@ __pycache__/
 out/
 state/*.json
 *.egg-info/
+
+.env
