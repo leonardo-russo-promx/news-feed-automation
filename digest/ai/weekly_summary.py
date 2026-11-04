@@ -46,6 +46,7 @@ async def weekly_summary(
         ]
         try:
             result = await ai.json_completion(SYSTEM_PROMPT, json.dumps(payload))
+            logger.debug("Weekly summary raw AI response: %s", json.dumps(result))
         except (ValueError, OpenAIError) as exc:
             logger.warning("Weekly summary AI call failed; using fallback: %s", exc)
             result = {}
@@ -73,6 +74,11 @@ async def weekly_summary(
                 )
             )
         if len(actions) < 3:
+            logger.warning(
+                "Weekly summary returned %d calls to action (expected at least 3); "
+                "adding fallback actions",
+                len(actions),
+            )
             actions.extend(
                 CallToAction(
                     title="Review the weekly digest", why="Check relevant updates.", item_ids=[]
