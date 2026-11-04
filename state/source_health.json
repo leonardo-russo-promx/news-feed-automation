@@ -1871,11 +1871,11 @@
     ],
     "items_30d": 466,
     "items_last_run": 2273,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": null,
-    "last_success": "2026-11-04T17:19:24.674952+00:00",
+    "last_success": "2026-11-04T18:17:15.678133+00:00",
     "newest_item_at": "2026-11-04T00:02:09+00:00",
     "resolved_feed_url": "https://www.microsoft.com/releasecommunications/api/v2/m365/rss",
     "suspended_since": null
@@ -1899,12 +1899,12 @@
       }
     ],
     "items_30d": 3,
-    "items_last_run": 5,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "items_last_run": 0,
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": "Sat, 31 Oct 2026 19:45:09 GMT",
-    "last_success": "2026-11-04T17:19:24.674952+00:00",
+    "last_success": "2026-11-04T18:17:15.678133+00:00",
     "newest_item_at": "2026-10-29T00:00:00+00:00",
     "resolved_feed_url": "https://microsoft.github.io/mcscatblog/feed",
     "suspended_since": null
@@ -1916,11 +1916,11 @@
     "item_dates": [],
     "items_30d": 0,
     "items_last_run": 0,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": "Mon, 24 Aug 2026 18:22:53 GMT",
-    "last_success": "2026-11-04T17:19:24.674952+00:00",
+    "last_success": "2026-11-04T18:17:15.678133+00:00",
     "newest_item_at": null,
     "resolved_feed_url": null,
     "suspended_since": null
@@ -1932,11 +1932,11 @@
     "item_dates": [],
     "items_30d": 0,
     "items_last_run": 0,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": "Thu, 22 Oct 2026 19:04:59 GMT",
-    "last_success": "2026-11-04T17:19:24.674952+00:00",
+    "last_success": "2026-11-04T18:17:15.678133+00:00",
     "newest_item_at": null,
     "resolved_feed_url": null,
     "suspended_since": null
@@ -1980,19 +1980,19 @@
       }
     ],
     "items_30d": 8,
-    "items_last_run": 10,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "items_last_run": 0,
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": "Wed, 04 Nov 2026 11:48:50 GMT",
-    "last_success": "2026-11-04T17:19:24.674952+00:00",
+    "last_success": "2026-11-04T18:17:15.678133+00:00",
     "newest_item_at": "2026-10-30T12:49:14+00:00",
     "resolved_feed_url": "https://devblogs.microsoft.com/feed/",
     "suspended_since": null
   },
   "dynamics-blog": {
     "consecutive_failures": 0,
-    "etag": "\"22d694510a42e88eb830b43977e86352-gzip\"",
+    "etag": "\"114b529e7285a2fd24c3b1a550748ec0-gzip\"",
     "health": "healthy",
     "item_dates": [
       {
@@ -2030,22 +2030,34 @@
       {
         "at": "2026-10-08T15:00:00+00:00",
         "id": "5a074a37b0336b575eb2cdb381ab8f642b589b4a9d52b3983abda89d7437d716"
+      },
+      {
+        "at": "2026-11-03T16:30:00+00:00",
+        "id": "4d4f6db636aceee675a3b15e6854a2e34553bddeb8234582cddce5f6053428c0"
+      },
+      {
+        "at": "2026-11-03T16:00:00+00:00",
+        "id": "e4be9fd5f414cc8d76579858639299f1af5413553c58ed606e24692d334f25f5"
+      },
+      {
+        "at": "2026-11-02T16:00:00+00:00",
+        "id": "e8638e21cd39b3eddb3a08aad2e2a5a93367dd4436f85b19fbaabcfb84424e31"
       }
     ],
-    "items_30d": 9,
+    "items_30d": 12,
     "items_last_run": 10,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Thu, 29 Oct 2026 22:47:21 GMT",
-    "last_success": "2026-11-04T17:19:24.674952+00:00",
-    "newest_item_at": "2026-10-29T15:30:00+00:00",
+    "last_modified": "Tue, 03 Nov 2026 16:30:00 GMT",
+    "last_success": "2026-11-04T18:17:15.678133+00:00",
+    "newest_item_at": "2026-11-03T16:30:00+00:00",
     "resolved_feed_url": "https://www.microsoft.com/en-us/dynamics-365/blog/feed/",
     "suspended_since": null
   },
   "foundry-blog": {
     "consecutive_failures": 0,
-    "etag": "W/\"67927530ac5bda09638354d6af8a21d3\"",
+    "etag": "W/\"72346ad9788cf2089263371a1ec24119\"",
     "health": "healthy",
     "item_dates": [
       {
@@ -2079,11 +2091,11 @@
     ],
     "items_30d": 7,
     "items_last_run": 10,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Wed, 04 Nov 2026 13:13:12 GMT",
-    "last_success": "2026-11-04T17:19:24.674952+00:00",
+    "last_modified": "Wed, 04 Nov 2026 18:15:08 GMT",
+    "last_success": "2026-11-04T18:17:15.678133+00:00",
     "newest_item_at": "2026-10-28T16:45:06+00:00",
     "resolved_feed_url": "https://devblogs.microsoft.com/foundry/feed/",
     "suspended_since": null
@@ -2095,7 +2107,7 @@
     "item_dates": [],
     "items_30d": 0,
     "items_last_run": 0,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": null,
@@ -2107,15 +2119,15 @@
   "github-product-news": {
     "consecutive_failures": 0,
     "etag": "W/\"680aa74a84bba4cfc6967d2d17b4193c\"",
-    "health": "stale",
+    "health": "healthy",
     "item_dates": [],
     "items_30d": 0,
-    "items_last_run": 10,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "items_last_run": 0,
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": "Wed, 04 Nov 2026 00:34:01 GMT",
-    "last_success": "2026-11-04T17:19:24.674952+00:00",
+    "last_success": "2026-11-04T18:17:15.678133+00:00",
     "newest_item_at": "2026-06-02T17:30:03+00:00",
     "resolved_feed_url": "https://github.blog/news-insights/product-news/feed/",
     "suspended_since": null
@@ -2127,18 +2139,18 @@
     "item_dates": [],
     "items_30d": 0,
     "items_last_run": 0,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": null,
-    "last_success": "2026-11-04T17:19:24.674952+00:00",
+    "last_success": "2026-11-04T18:17:15.678133+00:00",
     "newest_item_at": null,
     "resolved_feed_url": null,
     "suspended_since": null
   },
   "message-center": {
     "consecutive_failures": 0,
-    "etag": "W/\"6aeb43c5-60198\"",
+    "etag": "W/\"6aeb43c4-60198\"",
     "health": "healthy",
     "item_dates": [
       {
@@ -3560,26 +3572,22 @@
       {
         "at": "2026-10-05T19:11:10+00:00",
         "id": "c9bb2ae9b852efc652c6344204bcd5f7271284af93f078980f183a69156bad98"
-      },
-      {
-        "at": "2026-10-05T17:37:17+00:00",
-        "id": "d0e073701571ac9b16a320cc18699aa3ffb8b62c79f44d1472442fa587e08bf4"
       }
     ],
-    "items_30d": 356,
+    "items_30d": 355,
     "items_last_run": 500,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Wed, 04 Nov 2026 14:40:05 GMT",
-    "last_success": "2026-11-04T17:19:24.674952+00:00",
+    "last_modified": "Wed, 04 Nov 2026 14:40:04 GMT",
+    "last_success": "2026-11-04T18:17:15.678133+00:00",
     "newest_item_at": "2026-11-04T02:35:05+00:00",
     "resolved_feed_url": "https://mc.merill.net/rss.xml",
     "suspended_since": null
   },
   "msft-copilot-blog": {
     "consecutive_failures": 0,
-    "etag": "\"eec7fb8f73b11f62678fb15b94e4baca-gzip\"",
+    "etag": "\"5752ef36d76ebbf632fa91948626bfe0-gzip\"",
     "health": "healthy",
     "item_dates": [
       {
@@ -3592,19 +3600,19 @@
       }
     ],
     "items_30d": 2,
-    "items_last_run": 10,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "items_last_run": 0,
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Wed, 28 Oct 2026 13:28:46 GMT",
-    "last_success": "2026-11-04T17:19:24.674952+00:00",
+    "last_modified": "Wed, 23 Sep 2026 23:43:50 GMT",
+    "last_success": "2026-11-04T18:17:15.678133+00:00",
     "newest_item_at": "2026-10-27T16:00:00+00:00",
     "resolved_feed_url": "https://www.microsoft.com/en-us/copilot/blog/feed/",
     "suspended_since": null
   },
   "powerplatform-blog": {
     "consecutive_failures": 0,
-    "etag": "\"3b9aa92c16829e5a14a254d67bd369da-gzip\"",
+    "etag": "\"bd3d974ea49d0e7fa0eed68867084b54-gzip\"",
     "health": "healthy",
     "item_dates": [
       {
@@ -3638,16 +3646,24 @@
       {
         "at": "2026-10-08T12:36:38+00:00",
         "id": "4a4e6fc362f39e2af11dfd78e36b9cbd65a982c5015b519e5d7dcb5ec3fa626f"
+      },
+      {
+        "at": "2026-11-02T16:00:00+00:00",
+        "id": "740eb5fa34f5a8839b3532c0429e94f9cb765520e70c98e4bf7ca22f46a213dd"
+      },
+      {
+        "at": "2026-10-29T16:30:00+00:00",
+        "id": "994910357955a9ee29cf70cf6008e2fd21a3b5bf02780d8efdf12663fb7ace1f"
       }
     ],
-    "items_30d": 8,
+    "items_30d": 10,
     "items_last_run": 10,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Thu, 29 Oct 2026 17:06:11 GMT",
-    "last_success": "2026-11-04T17:19:24.674952+00:00",
-    "newest_item_at": "2026-10-28T20:50:01+00:00",
+    "last_modified": "Mon, 02 Nov 2026 21:06:15 GMT",
+    "last_success": "2026-11-04T18:17:15.678133+00:00",
+    "newest_item_at": "2026-11-02T16:00:00+00:00",
     "resolved_feed_url": "https://www.microsoft.com/en-us/power-platform/blog/feed/",
     "suspended_since": null
   },
@@ -3658,7 +3674,7 @@
     "item_dates": [],
     "items_30d": 0,
     "items_last_run": 0,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": null,
@@ -3714,26 +3730,26 @@
       }
     ],
     "items_30d": 10,
-    "items_last_run": 10,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "items_last_run": 0,
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": "Tue, 03 Nov 2026 18:21:13 GMT",
-    "last_success": "2026-11-04T17:19:24.674952+00:00",
+    "last_success": "2026-11-04T18:17:15.678133+00:00",
     "newest_item_at": "2026-11-03T17:32:47+00:00",
     "resolved_feed_url": "https://www.microsoft.com/en-us/security/blog/feed/",
     "suspended_since": null
   },
   "tc-copilot-blog": {
-    "consecutive_failures": 1,
+    "consecutive_failures": 2,
     "etag": null,
     "health": "failing",
     "item_dates": [],
     "items_30d": 0,
     "items_last_run": 0,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": "RuntimeError: https://techcommunity.microsoft.com/category/microsoft-copilot/blog/microsoft-copilot-blog: no RSS/Atom alternate link discovered",
-    "last_error_at": "2026-11-04T17:19:24.674952+00:00",
+    "last_error_at": "2026-11-04T18:17:15.678133+00:00",
     "last_modified": null,
     "last_success": null,
     "newest_item_at": null,
@@ -3741,15 +3757,15 @@
     "suspended_since": null
   },
   "tc-copilot-studio-blog": {
-    "consecutive_failures": 1,
+    "consecutive_failures": 2,
     "etag": null,
     "health": "failing",
     "item_dates": [],
     "items_30d": 0,
     "items_last_run": 0,
-    "last_check": "2026-11-04T17:19:24.674952+00:00",
+    "last_check": "2026-11-04T18:17:15.678133+00:00",
     "last_error": "RuntimeError: https://techcommunity.microsoft.com/category/microsoft-copilot/blog/copilot-studio-blog: no RSS/Atom alternate link discovered",
-    "last_error_at": "2026-11-04T17:19:24.674952+00:00",
+    "last_error_at": "2026-11-04T18:17:15.678133+00:00",
     "last_modified": null,
     "last_success": null,
     "newest_item_at": null,
