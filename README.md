@@ -20,8 +20,7 @@ The dry run reads recorded items from `tests/fixtures/items.json`, does not make
 
 Azure AI Foundry is the only external dependency. Configure:
 
-- Repository **variables**: `FOUNDRY_ENDPOINT` (OpenAI-compatible base URL, for example `https://<resource>.openai.azure.com/openai/v1/`) and `FOUNDRY_MODEL` (deployment name).
-- Repository **secret**: `FOUNDRY_API_KEY`.
+- Repository **secrets**: `FOUNDRY_ENDPOINT` (OpenAI-compatible base URL, for example `https://<resource>.openai.azure.com/openai/v1/`), `FOUNDRY_MODEL` (deployment name), and `FOUNDRY_API_KEY`.
 - **Settings > Pages > Source**: GitHub Actions.
 
 The `digest` workflow writes weekly archives (`YYYY-Www.html`) and an `index.html` to the `digest-state` branch, then deploys them to GitHub Pages. Pages sites are public on GitHub Free/Pro; use GitHub Enterprise Cloud for private access. Source-health failures are reported through the "digest problems" GitHub issue. Registry workflows use only `GITHUB_TOKEN`. Never commit credentials or tokens.

@@ -50,8 +50,8 @@ jobs:
           ARCHIVE_DIR: state-branch/archive
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          FOUNDRY_ENDPOINT: ${{ vars.FOUNDRY_ENDPOINT }}
-          FOUNDRY_MODEL: ${{ vars.FOUNDRY_MODEL }}
+          FOUNDRY_ENDPOINT: ${{ secrets.FOUNDRY_ENDPOINT }}
+          FOUNDRY_MODEL: ${{ secrets.FOUNDRY_MODEL }}
           FOUNDRY_API_KEY: ${{ secrets.FOUNDRY_API_KEY }}
           DRY_RUN_INPUT: ${{ inputs.dry_run }}
           FORCE_INPUT: ${{ inputs.force }}
