@@ -1,0 +1,13 @@
+timezone: UTC
+lookback_days: 7
+learn_lookback_days: 14
+max_items_llm: 80
+report_language: en
+roadmap_products:
+  - Microsoft Copilot Studio
+  - Microsoft 365 Copilot
+  - Power Apps
+  - Power Automate
+  - Power Pages
+  - Microsoft Dataverse
+  - Dynamics 365 Project Operations

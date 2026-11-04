@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "technology-digest"
+version = "0.1.0"
+description = "Weekly Microsoft technology research digest"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "beautifulsoup4>=4.12",
+  "feedparser>=6.0",
+  "httpx>=0.27",
+  "jinja2>=3.1",
+  "jsonschema>=4.22",
+  "openai>=1.40",
+  "pydantic>=2.8",
+  "PyYAML>=6.0",
+  "tenacity>=8.5",
+  "ruamel.yaml>=0.18",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3", "respx>=0.21", "ruff>=0.6"]
+
+[project.scripts]
+digest = "digest.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["digest*"]
+
+[tool.setuptools.package-data]
+"digest.ai" = ["prompts/*.md"]
+"digest.render" = ["templates/*.j2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

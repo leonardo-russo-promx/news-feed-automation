@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>Recorded feed</title>
+  <item><title>Recorded article</title><link>https://example.test/article</link>
+    <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate><description>Fixture summary.</description>
+  </item>
+  <item><title>Undated article</title><link>https://example.test/undated</link></item>
+</channel></rss>

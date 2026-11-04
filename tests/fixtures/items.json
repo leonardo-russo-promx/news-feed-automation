@@ -1,0 +1,44 @@
+[
+  {
+    "id": "fixture-item-1",
+    "source_id": "copilot-studio-whats-new",
+    "source_title": "What's new in Copilot Studio (Learn)",
+    "area": "AI",
+    "kind": "docs_change",
+    "title": "Sample Copilot Studio update",
+    "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
+    "published_at": "2026-11-03T10:00:00Z",
+    "summary_raw": "A sample fixture update for offline digest rendering.",
+    "content_text": "A sample fixture update for offline digest rendering.",
+    "categories": [],
+    "extra": {}
+  },
+  {
+    "id": "fixture-item-2",
+    "source_id": "foundry-blog",
+    "source_title": "Microsoft Foundry Blog",
+    "area": "Azure",
+    "kind": "blog_post",
+    "title": "Sample Foundry update",
+    "url": "https://devblogs.microsoft.com/foundry/",
+    "published_at": "2026-11-02T10:00:00Z",
+    "summary_raw": "A second sample update for the no-network dry-run.",
+    "content_text": "A second sample update for the no-network dry-run.",
+    "categories": [],
+    "extra": {}
+  },
+  {
+    "id": "fixture-item-3",
+    "source_id": "dynamics-blog",
+    "source_title": "Dynamics 365 Blog",
+    "area": "Dynamics",
+    "kind": "blog_post",
+    "title": "Sample Dynamics update",
+    "url": "https://www.microsoft.com/en-us/dynamics-365/blog/",
+    "published_at": "2026-11-01T10:00:00Z",
+    "summary_raw": "A third sample update for offline template and CTA coverage.",
+    "content_text": "A third sample update for offline template and CTA coverage.",
+    "categories": [],
+    "extra": {}
+  }
+]

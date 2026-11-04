@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["sources"],
+  "properties": {
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "method", "area", "enabled"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "title": {"type": "string", "minLength": 1},
+          "method": {"enum": ["rss", "learn_search", "page", "mail"]},
+          "feed_url": {"type": ["string", "null"], "format": "uri"},
+          "alt_feed_urls": {"type": "array", "items": {"type": "string", "format": "uri"}},
+          "website_url": {"type": ["string", "null"], "format": "uri"},
+          "area": {"type": "string", "minLength": 1},
+          "enabled": {"type": "boolean"},
+          "learn_scope": {"type": ["string", "null"]},
+          "learn_search_terms": {"type": ["string", "null"]},
+          "owner": {"type": ["string", "null"]},
+          "added_on": {"type": ["string", "null"], "format": "date"},
+          "tc_board_id": {"type": ["string", "null"]},
+          "filters": {
+            "type": "object",
+            "properties": {
+              "include_keywords": {"type": "array", "items": {"type": "string"}},
+              "exclude_keywords": {"type": "array", "items": {"type": "string"}},
+              "include_categories": {"type": "array", "items": {"type": "string"}},
+              "include_categories_from_settings": {"type": ["string", "null"]},
+              "max_items": {"type": ["integer", "null"], "minimum": 1}
+            },
+            "additionalProperties": false
+          },
+          "page": {
+            "type": "object",
+            "properties": {"selector": {"type": "string", "minLength": 1}},
+            "additionalProperties": false
+          },
+          "notes": {"type": ["string", "null"]}
+        },
+        "allOf": [
+          {"if": {"properties": {"method": {"const": "rss"}}}, "then": {"anyOf": [{"required": ["feed_url"]}, {"required": ["website_url"]}]}},
+          {"if": {"properties": {"method": {"const": "learn_search"}}}, "then": {"required": ["learn_scope"]}},
+          {"if": {"properties": {"method": {"const": "page"}}}, "then": {"required": ["website_url"]}}
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

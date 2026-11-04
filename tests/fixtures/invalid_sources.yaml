@@ -1,0 +1,7 @@
+sources:
+  - id: "Bad ID"
+    title: Invalid source
+    method: page
+    website_url: not-a-url
+    area: AI
+    enabled: true

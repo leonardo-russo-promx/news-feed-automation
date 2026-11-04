@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>Recorded roadmap feed</title>
+  <item><title>Copilot Studio feature</title><link>https://example.test/roadmap/1</link>
+    <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
+    <category>Microsoft Copilot Studio</category><description>Roadmap fixture.</description>
+  </item>
+</channel></rss>

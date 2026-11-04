@@ -1,0 +1,66 @@
+name: Add a technology digest source
+description: Request a new feed, documentation page, or newsletter source.
+title: "Add source: "
+labels: ["source-request"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: Human-readable source name.
+      placeholder: Microsoft product updates
+    validations:
+      required: true
+  - type: input
+    id: website_url
+    attributes:
+      label: Website URL
+      placeholder: https://example.com/news
+    validations:
+      required: true
+  - type: input
+    id: feed_url
+    attributes:
+      label: Feed URL (optional)
+      placeholder: https://example.com/feed.xml
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - AI
+        - Azure
+        - Development
+        - Developer
+        - Dynamics
+        - Power Platform
+        - Security
+        - License
+        - Roadmap
+        - Microsoft Platform
+    validations:
+      required: true
+  - type: dropdown
+    id: method
+    attributes:
+      label: Collection method
+      options:
+        - rss
+        - learn_search
+        - page
+    validations:
+      required: true
+  - type: input
+    id: learn_scope
+    attributes:
+      label: Learn scope (required for learn_search)
+  - type: input
+    id: learn_search_terms
+    attributes:
+      label: Learn search terms (optional)
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why should this source be included?
+    validations:
+      required: true

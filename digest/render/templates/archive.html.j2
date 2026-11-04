@@ -1,0 +1,12 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{ title }}</title></head><body style="font-family:Arial,sans-serif;color:#202124;margin:2rem;max-width:48rem">
+<p><a href="index.html">&larr; All weeks</a></p>
+<h1>{{ title }}</h1><p>Week {{ iso_week }}</p>
+<h2>Management summary</h2><ul>{% for line in management_summary %}<li>{{ line }}</li>{% endfor %}</ul>
+<h2>Calls to action</h2><ul>{% for action in calls_to_action %}<li><strong>{{ action.title }}</strong> — {{ action.why }}</li>{% endfor %}</ul>
+{% for area, items in sections.items() %}<h2>{{ area }}</h2>{% for item in items %}
+<article><h3><a href="{{ item.url }}">{{ item.title }}</a></h3><p>{{ item.ai_summary }}</p>
+<p>{{ item.source_title }} · {{ item.release_status }} · {{ item.action }} — {{ item.action_reason }}</p></article>{% endfor %}{% endfor %}
+{% if health_counts %}<h2>Source health</h2><p>{% for state, count in health_counts.items() %}{{ state }}: {{ count }}{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
+{% if failed_sources %}<h2>Sources with errors</h2><ul>{% for failure in failed_sources %}<li><a href="{{ failure.url }}">{{ failure.title }}</a>: {{ failure.error }}</li>{% endfor %}</ul>{% endif %}
+</body></html>

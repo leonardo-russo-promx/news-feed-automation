@@ -1,0 +1,127 @@
+sources:
+  - id: cat-blog
+    title: Copilot Studio CAT Blog
+    method: rss
+    feed_url: https://microsoft.github.io/mcscatblog/feed
+    alt_feed_urls: [https://microsoft.github.io/mcscatblog/feed.xml]
+    website_url: https://microsoft.github.io/mcscatblog/
+    area: AI
+    enabled: true
+    notes: "Feed path unverified."
+  - id: foundry-blog
+    title: Microsoft Foundry Blog
+    method: rss
+    feed_url: https://devblogs.microsoft.com/foundry/feed/
+    website_url: https://devblogs.microsoft.com/foundry/
+    area: Azure
+    enabled: true
+  - id: devblogs-all
+    title: Microsoft Dev Blogs (all)
+    method: rss
+    feed_url: https://devblogs.microsoft.com/feed/
+    website_url: https://devblogs.microsoft.com/
+    area: Development
+    enabled: true
+    filters:
+      include_keywords: [Copilot, agent, MCP, Foundry, "Power Platform", Dataverse, "Azure OpenAI", "Visual Studio", ".NET", GitHub]
+      max_items: 15
+  - id: licensing-news
+    title: Microsoft Licensing News
+    method: page
+    website_url: https://www.microsoft.com/en-us/licensing/news
+    area: License
+    enabled: true
+  - id: dynamics-blog
+    title: Dynamics 365 Blog
+    method: rss
+    feed_url: https://www.microsoft.com/en-us/dynamics-365/blog/feed/
+    website_url: https://www.microsoft.com/en-us/dynamics-365/blog/
+    area: Dynamics
+    enabled: true
+  - id: powerplatform-blog
+    title: Power Platform Blog
+    method: rss
+    feed_url: https://www.microsoft.com/en-us/power-platform/blog/feed/
+    website_url: https://www.microsoft.com/en-us/power-platform/blog/
+    area: Power Platform
+    enabled: true
+  - id: tc-copilot-blog
+    title: Microsoft Copilot Blog (Tech Community)
+    method: rss
+    website_url: https://techcommunity.microsoft.com/category/microsoft-copilot/blog/microsoft-copilot-blog
+    area: AI
+    enabled: true
+  - id: tc-copilot-studio-blog
+    title: Copilot Studio Blog (Tech Community)
+    method: rss
+    website_url: https://techcommunity.microsoft.com/category/microsoft-copilot/blog/copilot-studio-blog
+    area: AI
+    enabled: true
+  - id: msft-copilot-blog
+    title: Microsoft Copilot Blog (microsoft.com)
+    method: rss
+    feed_url: https://www.microsoft.com/en-us/copilot/blog/feed/
+    website_url: https://www.microsoft.com/en-us/copilot/blog/
+    area: AI
+    enabled: true
+  - id: security-blog
+    title: Microsoft Security Blog
+    method: rss
+    feed_url: https://www.microsoft.com/en-us/security/blog/feed/
+    website_url: https://www.microsoft.com/en-us/security/blog/
+    area: Security
+    enabled: true
+    filters:
+      max_items: 10
+  - id: github-product-news
+    title: GitHub Blog - Product News
+    method: rss
+    feed_url: https://github.blog/news-insights/product-news/feed/
+    alt_feed_urls: [https://github.blog/feed/]
+    website_url: https://github.blog/news-insights/product-news/
+    area: Developer
+    enabled: true
+  - id: foundry-whats-new
+    title: "Foundry Blog - What's new"
+    method: rss
+    feed_url: https://devblogs.microsoft.com/foundry/category/whats-new/feed/
+    website_url: https://devblogs.microsoft.com/foundry/category/whats-new/
+    area: Azure
+    enabled: false
+  - id: ai-at-work-roadmap
+    title: AI at Work Roadmap
+    method: rss
+    feed_url: https://www.microsoft.com/releasecommunications/api/v2/m365/rss
+    website_url: https://www.microsoft.com/microsoft-365/roadmap
+    area: Roadmap
+    enabled: true
+    filters:
+      include_categories_from_settings: roadmap_products
+      max_items: 25
+  - id: copilot-studio-whats-new
+    title: "What's new in Copilot Studio (Learn)"
+    method: page
+    website_url: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new
+    area: AI
+    enabled: true
+  - id: copilot-studio-release-notes
+    title: Copilot Studio release notes (Learn)
+    method: page
+    website_url: https://learn.microsoft.com/en-us/power-platform/released-versions/copilotstudio
+    area: AI
+    enabled: true
+  - id: project-operations-docs
+    title: Project Operations documentation updates
+    method: learn_search
+    website_url: https://learn.microsoft.com/en-us/dynamics365/project-operations/
+    area: Dynamics
+    enabled: true
+    learn_scope: TODO-get-from-Learn-search-RSS-link
+    learn_search_terms: ""
+  - id: message-center
+    title: Microsoft 365 Message Center (community mirror)
+    method: rss
+    feed_url: https://mc.merill.net/rss.xml
+    website_url: https://mc.merill.net/
+    area: Microsoft Platform
+    enabled: true

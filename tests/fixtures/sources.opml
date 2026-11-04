@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0"><head><title>Technology Digest Sources</title></head><body><outline text="AI"><outline text="AI Feed" title="AI Feed" type="rss" xmlUrl="https://example.test/ai.xml" htmlUrl="https://example.test/ai" /></outline><outline text="Azure"><outline text="Azure Feed" title="Azure Feed" type="rss" xmlUrl="https://example.test/azure.xml" htmlUrl="https://example.test/azure" /></outline></body></opml>
