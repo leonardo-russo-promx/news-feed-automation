@@ -70,7 +70,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: technology-digest-output
+          name: digest-rendered-output
           path: out/
           if-no-files-found: warn
       - name: Commit state and archive to digest-state only
