@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 from pathlib import Path
 
 from openai import OpenAIError
@@ -8,6 +9,8 @@ from openai import OpenAIError
 from digest.ai.client import DigestAI
 from digest.ai.sanitize import sanitize_text
 from digest.models import CallToAction, EnrichedItem
+
+logger = logging.getLogger(__name__)
 
 SYSTEM_PROMPT = (Path(__file__).parent / "prompts" / "weekly_summary.md").read_text(
     encoding="utf-8"
@@ -43,7 +46,8 @@ async def weekly_summary(
         ]
         try:
             result = await ai.json_completion(SYSTEM_PROMPT, json.dumps(payload))
-        except (ValueError, OpenAIError):
+        except (ValueError, OpenAIError) as exc:
+            logger.warning("Weekly summary AI call failed; using fallback: %s", exc)
             result = {}
         valid_ids = {item.id for item in relevant}
         summary_values = result.get("management_summary", [])
