@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import logging
 import os
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
@@ -25,6 +26,8 @@ from digest.registry import load_sources
 from digest.render.render import copy_stylesheet, render, write_index
 from digest.source_health import sync_github_issues, update_health
 from digest.state.store import JsonStore
+
+logger = logging.getLogger(__name__)
 
 
 def state_dir() -> Path:
@@ -284,6 +287,13 @@ async def run_digest(
     filtered = filtered[: settings.max_items_llm]
     seen = seen_store.read()
     fresh = deduplicate(filtered, seen, now)
+    logger.warning(
+        "Pipeline counts: collected=%d after_filter=%d fresh_after_dedupe=%d dry_run=%s",
+        len(items),
+        len(filtered),
+        len(fresh),
+        dry_run,
+    )
     if not dry_run and not (os.getenv("FOUNDRY_ENDPOINT") and os.getenv("FOUNDRY_API_KEY")):
         raise ValueError("FOUNDRY_ENDPOINT and FOUNDRY_API_KEY are required for a live digest run")
     ai = DigestAI()
@@ -297,6 +307,11 @@ async def run_digest(
         for item in fresh:
             enriched.append(await review_item(item, ai))
         summary, actions = await weekly_summary(enriched, ai)
+        logger.warning(
+            "Weekly summary result: %d summary lines, %d calls to action",
+            len(summary),
+            len(actions),
+        )
     finally:
         await ai.close()
 
@@ -513,6 +528,10 @@ def main() -> None:
     validate.add_argument("--only", nargs="+")
     subparsers.add_parser("export-opml")
     args = parser.parse_args()
+    logging.basicConfig(
+        level=os.getenv("DIGEST_LOG_LEVEL", "WARNING").upper(),
+        format="%(levelname)s %(name)s: %(message)s",
+    )
     try:
         if args.command in {"run", "dry-run"}:
             status = asyncio.run(

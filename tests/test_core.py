@@ -404,3 +404,62 @@ def test_strip_html_keeps_plain_text_around_tags() -> None:
     assert strip_html(raw) == "Heading Plain text stays. Link and 1 < 2 > 0, a<3,  kept end"
     assert strip_html("no tags at all") == "no tags at all"
     assert strip_html("x < y and z > w") == "x < y and z > w"
+
+def _enriched(n: int) -> EnrichedItem:
+    item = Item(
+        id=f"{n:064x}",
+        source_id="s",
+        source_title="S",
+        area="AI",
+        kind="blog_post",
+        title=f"Title {n}",
+        url=f"https://example.test/{n}",
+    )
+    return EnrichedItem(**item.model_dump(), ai_summary=f"Summary {n}.", action_reason="Why")
+
+
+class _ScriptedAI:
+    def __init__(self, response):
+        self._client = object()
+        self.response = response
+        self.payloads = []
+
+    async def json_completion(self, system, user):
+        self.payloads.append(user)
+        return self.response
+
+
+def test_weekly_summary_uses_valid_ai_response(caplog) -> None:
+    items = [_enriched(n) for n in range(1, 4)]
+    ai = _ScriptedAI(
+        {
+            "management_summary": ["Big <b>news</b>"],
+            "calls_to_action": [
+                {"title": f"Act {n}", "why": "Because", "item_ids": [items[n - 1].id, "bogus"]}
+                for n in range(1, 4)
+            ],
+        }
+    )
+    summary, actions = asyncio.run(weekly_summary(items, ai))
+    assert summary == ["Big news"]
+    assert [a.title for a in actions] == ["Act 1", "Act 2", "Act 3"]
+    assert all(len(a.item_ids) == 1 for a in actions)
+    assert "raw AI response" in caplog.text
+
+
+def test_weekly_summary_tops_up_actions_from_items_and_logs(caplog) -> None:
+    items = [_enriched(n) for n in range(1, 4)]
+    ai = _ScriptedAI({"management_summary": [], "calls_to_action": "not a list"})
+    summary, actions = asyncio.run(weekly_summary(items, ai))
+    assert len(summary) == 3
+    assert [a.title for a in actions] == ["Review: Title 1", "Review: Title 2", "Review: Title 3"]
+    assert "expected a list" in caplog.text
+    assert "0 calls to action" in caplog.text
+
+
+def test_weekly_summary_without_items_skips_ai_and_warns(caplog) -> None:
+    ai = _ScriptedAI({"management_summary": ["x"]})
+    summary, actions = asyncio.run(weekly_summary([], ai))
+    assert summary == [] and len(actions) == 3
+    assert ai.payloads == []
+    assert "no relevant items" in caplog.text

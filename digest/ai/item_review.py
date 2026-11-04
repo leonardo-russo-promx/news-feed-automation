@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 from pathlib import Path
 
 from openai import OpenAIError
@@ -9,6 +10,8 @@ from pydantic import ValidationError
 from digest.ai.client import DigestAI
 from digest.ai.sanitize import sanitize_text
 from digest.models import EnrichedItem, Item
+
+logger = logging.getLogger(__name__)
 
 SYSTEM_PROMPT = (Path(__file__).parent / "prompts" / "item_review.md").read_text(encoding="utf-8")
 OUTPUT_FIELDS = {"relevance", "ai_summary", "release_status", "action", "action_reason"}
@@ -55,6 +58,9 @@ async def review_item(item: Item, ai: DigestAI) -> EnrichedItem:
                 **{key: value for key, value in response.items() if key in OUTPUT_FIELDS},
             )
         except (ValidationError, ValueError, KeyError, OpenAIError) as exc:
+            logger.warning(
+                "Item review failed for %s (%s: %s)", item.title[:80], type(exc).__name__, exc
+            )
             last_error = exc
     return EnrichedItem(
         **item.model_dump(),
