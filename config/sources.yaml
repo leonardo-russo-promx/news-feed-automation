@@ -48,12 +48,14 @@ sources:
   - id: tc-copilot-blog
     title: Microsoft Copilot Blog (Tech Community)
     method: rss
+    feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=microsoft-copilot-blog
     website_url: https://techcommunity.microsoft.com/category/microsoft-copilot/blog/microsoft-copilot-blog
     area: AI
     enabled: true
   - id: tc-copilot-studio-blog
     title: Copilot Studio Blog (Tech Community)
     method: rss
+    feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=copilot-studio-blog
     website_url: https://techcommunity.microsoft.com/category/microsoft-copilot/blog/copilot-studio-blog
     area: AI
     enabled: true

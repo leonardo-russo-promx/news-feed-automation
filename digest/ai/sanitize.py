@@ -13,10 +13,15 @@ TAG_PATTERN = re.compile(
 
 
 def strip_html(value: str) -> str:
-    text = COMMENT_PATTERN.sub("", value)
-    text = BLOCK_PATTERN.sub("", text)
-    text = TAG_PATTERN.sub("", text)
-    return unescape(text)
+    # Feeds often double-escape markup (``&lt;p&gt;``); unescape and strip until stable.
+    text = value
+    for _ in range(3):
+        stripped = TAG_PATTERN.sub("", BLOCK_PATTERN.sub("", COMMENT_PATTERN.sub("", text)))
+        unescaped = unescape(stripped)
+        if unescaped == text:
+            break
+        text = unescaped
+    return text
 
 
 def sanitize_text(value: str, valid_ids: set[str] | None = None) -> str:

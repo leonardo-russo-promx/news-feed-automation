@@ -8,7 +8,7 @@ from openai import OpenAIError
 from pydantic import ValidationError
 
 from digest.ai.client import DigestAI
-from digest.ai.sanitize import sanitize_text
+from digest.ai.sanitize import sanitize_text, strip_html
 from digest.models import EnrichedItem, Item
 
 logger = logging.getLogger(__name__)
@@ -36,7 +36,7 @@ async def review_item(item: Item, ai: DigestAI) -> EnrichedItem:
         "title": item.title,
         "source": item.source_title,
         "area": item.area,
-        "text": (item.content_text or item.summary_raw)[:6000],
+        "text": strip_html(item.content_text or item.summary_raw)[:6000],
         "schema": {
             "relevance": ["high", "medium", "low", "ignore"],
             "ai_summary": "2-3 sentences",
@@ -70,4 +70,5 @@ async def review_item(item: Item, ai: DigestAI) -> EnrichedItem:
         ),
         action="monitor",
         action_reason=f"AI review failed validation; used source summary ({last_error}).",
+        review_failed=True,
     )

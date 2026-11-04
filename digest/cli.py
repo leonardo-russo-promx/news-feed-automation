@@ -163,7 +163,12 @@ async def _collect_source(
 
 
 async def run_digest(
-    *, dry_run: bool, week_arg: str | None, force: bool, source_filter: str | None
+    *,
+    dry_run: bool,
+    week_arg: str | None,
+    force: bool,
+    source_filter: str | None,
+    reset_seen: bool = False,
 ) -> int:
     settings = load_settings()
     now = datetime.now(UTC)
@@ -285,7 +290,7 @@ async def run_digest(
         reverse=True,
     )
     filtered = filtered[: settings.max_items_llm]
-    seen = seen_store.read()
+    seen = {} if reset_seen else seen_store.read()
     fresh = deduplicate(filtered, seen, now)
     logger.warning(
         "Pipeline counts: collected=%d after_filter=%d fresh_after_dedupe=%d dry_run=%s",
@@ -299,6 +304,7 @@ async def run_digest(
     ai = DigestAI()
     try:
         if not dry_run:
+            await ai.preflight()
             async with httpx.AsyncClient(
                 timeout=httpx.Timeout(20), follow_redirects=True
             ) as client:
@@ -306,6 +312,15 @@ async def run_digest(
         enriched: list[EnrichedItem] = []
         for item in fresh:
             enriched.append(await review_item(item, ai))
+        retry_ids = {item.id for item in enriched if item.review_failed}
+        if retry_ids:
+            logger.warning(
+                "%d of %d items failed AI review; they will be retried on the next run",
+                len(retry_ids),
+                len(enriched),
+            )
+            for item_id in retry_ids:
+                seen.pop(item_id, None)
         summary, actions = await weekly_summary(enriched, ai)
         logger.warning(
             "Weekly summary result: %d summary lines, %d calls to action",
@@ -524,6 +539,11 @@ def main() -> None:
         command_parser.add_argument("--week")
         command_parser.add_argument("--force", action="store_true")
         command_parser.add_argument("--source")
+        command_parser.add_argument(
+            "--reset-seen",
+            action="store_true",
+            help="Ignore previously seen items so they are processed again",
+        )
     validate = subparsers.add_parser("validate-sources")
     validate.add_argument("--only", nargs="+")
     subparsers.add_parser("export-opml")
@@ -540,6 +560,7 @@ def main() -> None:
                     week_arg=args.week,
                     force=args.force,
                     source_filter=args.source,
+                    reset_seen=args.reset_seen,
                 )
             )
         elif args.command == "validate-sources":

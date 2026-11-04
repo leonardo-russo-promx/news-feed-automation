@@ -463,3 +463,66 @@ def test_weekly_summary_without_items_skips_ai_and_warns(caplog) -> None:
     assert summary == [] and len(actions) == 3
     assert ai.payloads == []
     assert "no relevant items" in caplog.text
+
+
+def test_foundry_auth_error_fails_fast_instead_of_falling_back(monkeypatch) -> None:
+    from openai import AuthenticationError
+
+    from digest.ai.client import AIConfigurationError, DigestAI
+    from digest.ai.item_review import review_item
+
+    monkeypatch.setenv("FOUNDRY_ENDPOINT", "https://res.openai.azure.com/openai/v1/")
+    monkeypatch.setenv("FOUNDRY_MODEL", "deploy")
+    monkeypatch.setenv("FOUNDRY_API_KEY", "secret-key-value")
+    ai = DigestAI()
+
+    async def denied(**kwargs):
+        request = httpx.Request("POST", "https://res.openai.azure.com/openai/v1/chat/completions")
+        raise AuthenticationError(
+            "Access denied for secret-key-value",
+            response=httpx.Response(401, request=request),
+            body=None,
+        )
+
+    monkeypatch.setattr(ai._client.chat.completions, "create", denied)
+    with pytest.raises(AIConfigurationError) as error:
+        asyncio.run(ai.preflight())
+    assert "HTTP 401" in str(error.value) and "res.openai.azure.com" in str(error.value)
+    assert "secret-key-value" not in str(error.value)
+    with pytest.raises(AIConfigurationError):
+        asyncio.run(review_item(_enriched(1), ai))
+
+
+def test_review_failure_is_flagged_for_retry() -> None:
+    from digest.ai.item_review import review_item
+
+    class BrokenAI:
+        _client = object()
+
+        async def json_completion(self, system, user):
+            raise ValueError("not json")
+
+    item = Item(
+        id="b" * 64,
+        source_id="s",
+        source_title="S",
+        area="AI",
+        kind="blog_post",
+        title="T",
+        url="https://example.test/t",
+        summary_raw="Source summary",
+    )
+    result = asyncio.run(review_item(item, BrokenAI()))
+    assert result.review_failed is True
+    assert "not json" in result.action_reason
+
+
+def test_strip_html_removes_escaped_markup_from_feeds() -> None:
+    from digest.ai.sanitize import strip_html
+
+    raw = (
+        "&lt;p&gt;Async &lt;b&gt;invoices&lt;/b&gt;&lt;/p&gt;"
+        "&lt;table&gt;&lt;td&gt;Monthly&lt;/td&gt;"
+    )
+    assert strip_html(raw) == "Async invoicesMonthly"
+    assert strip_html("1 &amp;lt; 2") == "1 < 2"

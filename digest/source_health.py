@@ -172,9 +172,7 @@ async def sync_github_issues(sources: list[Source], health: dict[str, dict[str, 
         if dashboard:
             updated = await client.patch(dashboard["url"], json={"body": body})
             updated.raise_for_status()
-            pinned = await client.post(f"{base}/{dashboard['number']}/pin")
-            if pinned.status_code not in {201, 204, 422}:
-                pinned.raise_for_status()
+            await _pin_issue(client, f"{base}/{dashboard['number']}/pin")
         else:
             created = await client.post(
                 base,
@@ -187,9 +185,14 @@ async def sync_github_issues(sources: list[Source], health: dict[str, dict[str, 
             created.raise_for_status()
             issue_number = created.json().get("number")
             if issue_number:
-                pinned = await client.post(f"{base}/{issue_number}/pin")
-                if pinned.status_code not in {201, 204, 422}:
-                    pinned.raise_for_status()
+                await _pin_issue(client, f"{base}/{issue_number}/pin")
+
+
+async def _pin_issue(client: httpx.AsyncClient, url: str) -> None:
+    # The REST pin endpoint is not available for every repository/token; pinning is cosmetic.
+    pinned = await client.post(url)
+    if pinned.status_code not in {201, 204, 404, 422}:
+        pinned.raise_for_status()
 
 
 def _feed_suggestion(source: Source, status: dict[str, Any]) -> str:

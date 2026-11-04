@@ -24,6 +24,16 @@ Azure AI Foundry is the only external dependency. Configure:
 - **Settings > Pages > Source**: GitHub Actions.
 
 The `digest` workflow writes weekly archives (`YYYY-Www.html`) and an `index.html` to the `digest-state` branch, then deploys them to GitHub Pages. Pages sites are public on GitHub Free/Pro; use GitHub Enterprise Cloud for private access. Source-health failures are reported through the "digest problems" GitHub issue. Registry workflows use only `GITHUB_TOKEN`. Never commit credentials or tokens.
+
+### Troubleshooting Foundry errors
+
+Each live run starts with a one-call preflight. If Foundry returns 401, 403 or 404, the run fails before anything is rendered, committed or deployed, and the error shows the endpoint host and model it used (never the key).
+
+- **401 "invalid subscription key or wrong API endpoint"**: `FOUNDRY_API_KEY` does not belong to the resource in `FOUNDRY_ENDPOINT`. Copy both from the same resource (**Foundry portal > deployment > Endpoint/Key**, or **Azure portal > resource > Keys and Endpoint**). Use the OpenAI v1 route, `https://<resource>.openai.azure.com/openai/v1/` (or `https://<resource>.services.ai.azure.com/openai/v1/`). Do not use a Foundry *project* URL (`.../api/projects/...`), because it requires Entra ID instead of a key.
+- **404**: `FOUNDRY_MODEL` must be the *deployment* name, not the base model name.
+
+Items whose AI review fails for any other reason are not marked as seen, so the next run retries them. To reprocess items already recorded as seen (for example, after a run that used wrong credentials), dispatch the workflow with `force` and `reset_seen`.
+
 ## Registry and runtime state
 
 Human-edited sources live in `config/sources.yaml` on the default branch and are schema- and model-validated on PRs. Runtime state, source health, `STATUS.md`, OPML, and weekly archive files are written only to `digest-state`. The source-health dashboard and suspension issues are maintained with `GITHUB_TOKEN`.

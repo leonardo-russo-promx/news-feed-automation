@@ -12,6 +12,10 @@ on:
         description: Re-run even if this ISO week is already recorded
         type: boolean
         default: false
+      reset_seen:
+        description: Forget previously seen items so they are processed again
+        type: boolean
+        default: false
       week:
         description: ISO week, for example 2026-W45
         type: string
@@ -55,6 +59,7 @@ jobs:
           FOUNDRY_API_KEY: ${{ secrets.FOUNDRY_API_KEY }}
           DRY_RUN_INPUT: ${{ inputs.dry_run }}
           FORCE_INPUT: ${{ inputs.force }}
+          RESET_SEEN_INPUT: ${{ inputs.reset_seen }}
           WEEK_INPUT: ${{ inputs.week }}
         run: |
           if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" && "$DRY_RUN_INPUT" == "true" ]]; then
@@ -65,6 +70,7 @@ jobs:
           args=()
           if [[ -n "$WEEK_INPUT" ]]; then args+=(--week "$WEEK_INPUT"); fi
           if [[ "$FORCE_INPUT" == "true" ]]; then args+=(--force); fi
+          if [[ "$RESET_SEEN_INPUT" == "true" ]]; then args+=(--reset-seen); fi
           python -m digest "${command[@]}" "${args[@]}"
       - name: Upload rendered output
         if: always()

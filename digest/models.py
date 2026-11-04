@@ -104,6 +104,7 @@ class EnrichedItem(Item):
     release_status: Literal["preview", "ga", "retirement", "announcement", "unknown"] = "unknown"
     action: Literal["look_into", "test", "inform_customers", "monitor", "ignore"] = "monitor"
     action_reason: str = ""
+    review_failed: bool = False
 
 
 class SourceResult(BaseModel):
