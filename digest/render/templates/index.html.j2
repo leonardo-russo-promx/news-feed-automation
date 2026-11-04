@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{ title }}</title></head><body style="font-family:Arial,sans-serif;color:#202124;margin:2rem;max-width:48rem">
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{ title }}</title><link rel="stylesheet" href="style.css"></head><body>
 <h1>{{ title }}</h1>
 {% if weeks %}<p>Latest: <a href="{{ weeks[0] }}.html">{{ weeks[0] }}</a></p>
 <h2>Archive</h2><ul>{% for week in weeks %}<li><a href="{{ week }}.html">{{ week }}</a></li>{% endfor %}</ul>

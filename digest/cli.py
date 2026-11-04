@@ -22,7 +22,7 @@ from digest.pipeline.dedupe import deduplicate
 from digest.pipeline.enrich import enrich_content
 from digest.pipeline.filter import filter_source_items, in_lookback
 from digest.registry import load_sources
-from digest.render.render import render, write_index
+from digest.render.render import copy_stylesheet, render, write_index
 from digest.source_health import sync_github_issues, update_health
 from digest.state.store import JsonStore
 
@@ -355,6 +355,7 @@ async def run_digest(
     if not dry_run:
         write_index(archive_path.parent)
     (out / "archive.html").write_text(archive_html, encoding="utf-8")
+    copy_stylesheet(out)
     (out / "run.json").write_text(
         json.dumps(
             {

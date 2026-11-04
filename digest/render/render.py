@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import shutil
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -51,7 +52,12 @@ def render(
     )
 
 
+def copy_stylesheet(target_dir: Path) -> None:
+    shutil.copyfile(TEMPLATE_DIR / "style.css", target_dir / "style.css")
+
+
 def write_index(archive_dir: Path, title: str = "Technology Digest") -> Path:
+    copy_stylesheet(archive_dir)
     weeks = sorted(
         (path.stem for path in archive_dir.glob("*.html") if WEEK_FILE.match(path.name)),
         reverse=True,

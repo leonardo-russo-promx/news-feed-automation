@@ -31,7 +31,7 @@ include = ["digest*"]
 
 [tool.setuptools.package-data]
 "digest.ai" = ["prompts/*.md"]
-"digest.render" = ["templates/*.j2"]
+"digest.render" = ["templates/*.j2", "templates/*.css"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

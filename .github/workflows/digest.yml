@@ -87,7 +87,7 @@ jobs:
         if: github.event_name != 'workflow_dispatch' || inputs.dry_run != true
         run: |
           mkdir -p site
-          cp state-branch/archive/*.html site/
+          cp state-branch/archive/*.html state-branch/archive/style.css site/
           touch site/.nojekyll
       - name: Upload Pages artifact
         if: github.event_name != 'workflow_dispatch' || inputs.dry_run != true
