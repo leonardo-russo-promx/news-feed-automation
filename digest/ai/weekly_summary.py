@@ -76,7 +76,10 @@ async def weekly_summary(
                 for _ in range(3 - len(actions))
             )
         if not summary:
-            summary = [f"{item.title}: {item.ai_summary}" for item in relevant[:7]]
+            summary = [
+                sanitize_text(f"{item.title}: {item.ai_summary}", valid_ids)
+                for item in relevant[:7]
+            ]
     while len(actions) < 3:
         actions.append(
             CallToAction(

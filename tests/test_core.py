@@ -356,3 +356,40 @@ def test_write_index_lists_weeks_newest_first(tmp_path: Path) -> None:
     html = write_index(tmp_path).read_text(encoding="utf-8")
     assert html.index("2026-W45") < html.index("2026-W44")
     assert "notes" not in html
+
+def test_sanitize_text_strips_html_tags_and_decodes_entities() -> None:
+    from digest.ai.sanitize import sanitize_text
+
+    raw = '<p>Update <a href="https://x.test">now</a></p><script>alert(1)</script> 1 &lt; 2 &amp; 3'
+    result = sanitize_text(raw)
+    assert "<p>" not in result and "<a" not in result and "script" not in result
+    assert result == "Update now 1 < 2 & 3"
+
+
+def test_ai_output_is_stripped_before_reaching_items() -> None:
+    from digest.ai.item_review import review_item
+
+    class FakeAI:
+        _client = object()
+
+        async def json_completion(self, system, user):
+            return {
+                "relevance": "high",
+                "ai_summary": "<p>Plain <a href='x'>text</a></p>",
+                "release_status": "ga",
+                "action": "test",
+                "action_reason": "<b>Because</b>",
+            }
+
+    item = Item(
+        id="a" * 64,
+        source_id="s",
+        source_title="S",
+        area="AI",
+        kind="blog_post",
+        title="T",
+        url="https://example.test/t",
+    )
+    result = asyncio.run(review_item(item, FakeAI()))
+    assert result.ai_summary == "Plain text"
+    assert result.action_reason == "Because"
