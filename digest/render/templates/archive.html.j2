@@ -2,11 +2,11 @@
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{ title }}</title><link rel="stylesheet" href="style.css"></head><body>
 <p><a href="index.html">&larr; All weeks</a></p>
 <h1>{{ title }}</h1><p>Week {{ iso_week }}</p>
-<h2>Management summary</h2><ul>{% for line in management_summary %}<li>{{ line }}</li>{% endfor %}</ul>
-<h2>Calls to action</h2><ul>{% for action in calls_to_action %}<li><strong>{{ action.title }}</strong> — {{ action.why }}</li>{% endfor %}</ul>
-{% for area, items in sections.items() %}<h2>{{ area }}</h2>{% for item in items %}
+<details class="section" open><summary><h2>Management summary</h2></summary><ul>{% for line in management_summary %}<li>{{ line }}</li>{% endfor %}</ul></details>
+<details class="section" open><summary><h2>Calls to action</h2></summary><ul>{% for action in calls_to_action %}<li><strong>{{ action.title }}</strong> — {{ action.why }}</li>{% endfor %}</ul></details>
+{% for area, items in sections.items() %}<details class="section"><summary><h2>{{ area }} <span class="count">{{ items|length }}</span></h2></summary>{% for item in items %}
 <article><h3><a href="{{ item.url }}">{{ item.title }}</a></h3><p>{{ item.ai_summary }}</p>
-<p>{{ item.source_title }} · {{ item.release_status }} · {{ item.action }} — {{ item.action_reason }}</p></article>{% endfor %}{% endfor %}
-{% if health_counts %}<h2>Source health</h2><p>{% for state, count in health_counts.items() %}{{ state }}: {{ count }}{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
-{% if failed_sources %}<h2>Sources with errors</h2><ul>{% for failure in failed_sources %}<li><a href="{{ failure.url }}">{{ failure.title }}</a>: {{ failure.error }}</li>{% endfor %}</ul>{% endif %}
+<p>{{ item.source_title }} · {{ item.release_status }} · {{ item.action }} — {{ item.action_reason }}</p></article>{% endfor %}</details>{% endfor %}
+{% if health_counts %}<details class="section"><summary><h2>Source health</h2></summary><p>{% for state, count in health_counts.items() %}{{ state }}: {{ count }}{% if not loop.last %} · {% endif %}{% endfor %}</p></details>{% endif %}
+{% if failed_sources %}<details class="section"><summary><h2>Sources with errors <span class="count">{{ failed_sources|length }}</span></h2></summary><ul>{% for failure in failed_sources %}<li><a href="{{ failure.url }}">{{ failure.title }}</a>: {{ failure.error }}</li>{% endfor %}</ul></details>{% endif %}
 </body></html>

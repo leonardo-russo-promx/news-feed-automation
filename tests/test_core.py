@@ -526,3 +526,17 @@ def test_strip_html_removes_escaped_markup_from_feeds() -> None:
     )
     assert strip_html(raw) == "Async invoicesMonthly"
     assert strip_html("1 &amp;lt; 2") == "1 < 2"
+
+def test_render_collapses_sections_except_summary_and_actions() -> None:
+    html = render(
+        title="T",
+        iso_week="2026-W45",
+        management_summary=["Line"],
+        calls_to_action=[],
+        sections={"AI": [_enriched(1)]},
+        failed_sources=[],
+        health_counts={},
+    )
+    assert '<details class="section" open><summary><h2>Management summary' in html
+    assert '<details class="section" open><summary><h2>Calls to action' in html
+    assert '<details class="section"><summary><h2>AI <span class="count">1</span>' in html
