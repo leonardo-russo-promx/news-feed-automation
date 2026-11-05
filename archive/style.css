@@ -101,6 +101,55 @@ article p:last-child {
   font-size: 0.9rem;
 }
 
+details.section > summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+details.section > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.section > summary h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+details.section > summary h2::before {
+  content: "▸";
+  color: var(--muted);
+  font-size: 0.9em;
+  transition: transform 0.15s ease;
+}
+
+details.section[open] > summary h2::before {
+  transform: rotate(90deg);
+}
+
+details.section > summary:hover h2,
+details.section > summary:focus-visible h2 {
+  color: var(--accent);
+}
+
+details.section > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.count {
+  margin-left: auto;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.05rem 0.6rem;
+}
+
 @media (max-width: 40rem) {
   body {
     padding: 1rem;
@@ -122,5 +171,9 @@ article p:last-child {
 
   article:hover {
     transform: none;
+  }
+
+  details.section > summary h2::before {
+    transition: none;
   }
 }
