@@ -149,10 +149,6 @@
         "id": "2f8d28c02c373d92768243a480f1a7d386490415da6de70936043cb4f8f69510"
       },
       {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "1705adf380e11538514bb77e76ec6dd6afa9a8d2805808d1717acabcf75945d4"
-      },
-      {
         "at": "2026-11-03T00:14:11+00:00",
         "id": "eda736dc7e5aeb5d7195c4ecd36b2ccf44b9fad4df1989ae0c1f0cde6ed9b518"
       },
@@ -205,10 +201,6 @@
         "id": "2794dff12075b93c5be279af787c5b911e4dc78425d891367b3eae6983aa31e7"
       },
       {
-        "at": "2026-10-06T22:56:31+00:00",
-        "id": "1fd3e4ccdfaddcadec5d32d9088ad3774269762eb74978f341ae18e6fb6711ff"
-      },
-      {
         "at": "2026-10-30T22:08:34+00:00",
         "id": "c1a97e41502b62e5a675ec8c550c4d96a0538f9105f42eddd334598188aace5b"
       },
@@ -227,10 +219,6 @@
       {
         "at": "2026-10-19T23:15:15+00:00",
         "id": "7eda6a6a3bd792ca3d2c5a259787501974240b48acd404b382a4e1b72a4a0a2b"
-      },
-      {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "4e498f34a3e21f74e59453a3072d04db48301fd7e5f83360c98595e16acadd4f"
       },
       {
         "at": "2026-10-29T23:01:00+00:00",
@@ -271,10 +259,6 @@
       {
         "at": "2026-10-27T23:05:02+00:00",
         "id": "42cffebceb2c71bf94a93b60756dfffc8e70d849a0d2a7363da1d27a625e2eb6"
-      },
-      {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "266ac2f5bdc39d7c0a4903001b05573333c866ffdfda46840bd04b483c06b27e"
       },
       {
         "at": "2026-10-28T23:04:31+00:00",
@@ -765,10 +749,6 @@
         "id": "0276db1685ec591e4551a1612fcd4ec380935a4b5ede709b61365a6065319376"
       },
       {
-        "at": "2026-10-06T22:56:31+00:00",
-        "id": "164446bf992c31eb610ff422b735a8c78ac9e24fabab1eccd0e8d1b66f1334ca"
-      },
-      {
         "at": "2026-10-21T23:02:10+00:00",
         "id": "18a3cc6b7cc867f43b7ae62150384ccdb7691eb9a3d33b10e53bde9bc4cb620f"
       },
@@ -931,10 +911,6 @@
       {
         "at": "2026-10-14T23:01:02+00:00",
         "id": "13f2e4a5520db51abd6e63a3ac61d36ac7a348f210ac0f4f8cee7a235358c102"
-      },
-      {
-        "at": "2026-10-09T22:04:35+00:00",
-        "id": "8dd53be460b358d098f301d0338869baf4261e16c9e73654ac2f76f9492e74af"
       },
       {
         "at": "2026-10-16T19:10:12+00:00",
@@ -1709,10 +1685,6 @@
         "id": "f4c2a9dd157164a8085b1af67ddc127bc3551c9099df00dc7d34194467f5598d"
       },
       {
-        "at": "2026-10-06T22:56:31+00:00",
-        "id": "e67fea044a35052f7a701afafbf9e018d9dbdacb74e26a3c340a4607a6dd9353"
-      },
-      {
         "at": "2026-10-12T23:01:05+00:00",
         "id": "d5d2d29a786c1c1537313e370aed59e800cf42cac864bc15cd85a8fe63544364"
       },
@@ -1745,128 +1717,168 @@
         "id": "500026580d51d73ea3e913fa0209f3e6942325e1ffc9eee16c14e66cd4072a10"
       },
       {
-        "at": "2026-10-09T22:04:35+00:00",
-        "id": "b6135d8219bf02e1452331aa4801baf2985c00f507e62d08e0472226c94a6e9e"
+        "at": "2026-11-06T23:04:41+00:00",
+        "id": "9d2061de35943546df34784e8e5cc83ae05b3f0f64a4789316145bfe4008e93c"
       },
       {
-        "at": "2026-10-09T22:04:35+00:00",
-        "id": "c290ceb703b42eccc47b84d391abeb28436f7c35e7474dba4ca0dbc417c9e8b1"
+        "at": "2026-11-06T23:04:41+00:00",
+        "id": "dc9d8ce976d6ce50625346cdb70d3305421510704c1fd545f6b5eef75b8089de"
       },
       {
-        "at": "2026-10-09T22:04:35+00:00",
-        "id": "eb8bd88b0b7a828d41373262d52ad85fe85a4e4795be5d7e995d0aefe38dd666"
+        "at": "2026-11-06T23:04:41+00:00",
+        "id": "547c07096e9e414157083fdeca573780489a07c8b79935ae52396f9388db4c36"
       },
       {
-        "at": "2026-10-09T22:04:35+00:00",
-        "id": "d94cdafe32fa62dee1ffdb12b292dd88391b7de92f8bf4078ba49f3a303de85b"
+        "at": "2026-11-06T23:04:41+00:00",
+        "id": "26f5c715cd478a2d2e13d40d8ab39c750b1a3ff4193b91509b0d1de52a48ba29"
       },
       {
-        "at": "2026-10-09T22:04:35+00:00",
-        "id": "ae985cddcfb662155a48025936976a3ab668790c8bd8742a6229c169e037df3d"
+        "at": "2026-11-06T23:04:41+00:00",
+        "id": "f329d86d217290b30902a38de6b4bae32499e2123ac8973da1f490e47edb2aba"
       },
       {
-        "at": "2026-10-09T22:04:35+00:00",
-        "id": "fe10ba52265cd9e12db85c512e941bdf7013e43301aefe8cea64d7171161ccdc"
+        "at": "2026-11-06T23:04:41+00:00",
+        "id": "139ce30dc85b19bebb10d88f716fe2a827a7ab5e9482dd269a40cbe12ea5e7b1"
       },
       {
-        "at": "2026-10-09T22:04:35+00:00",
-        "id": "6c0642dd9958297cbc583eab1872f20fe029264bb8730f11552efc3b242d4a20"
+        "at": "2026-11-06T23:04:41+00:00",
+        "id": "d48c0541a2b1ac872fa984b82b9e14bf3ada0c9896ebf9d65d7b39b95d3b9907"
       },
       {
-        "at": "2026-10-09T22:04:35+00:00",
-        "id": "ef8e785308672674a3c5a1e38b21b2e00ac4e3134c1626724ba285e943cdc32f"
+        "at": "2026-11-06T23:04:41+00:00",
+        "id": "ea680c8c7a43577d066d6c3a912856b2e06f715c5595897720df6ce29b8bc6fb"
       },
       {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "6dc7b7bc0efc190e0a92d55a31cc6cc22fa78820509b7996c04f1c8ef1c01fc8"
+        "at": "2026-11-06T23:04:41+00:00",
+        "id": "302db12a880e2bccb30782c7ce4f6092ba2b26740de2ece1aafcbc1051a3c207"
       },
       {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "f1698e82c933e90f46daa6a8a22e58b4d535f6cd0249b643119cf12387b1bae2"
+        "at": "2026-11-06T23:04:41+00:00",
+        "id": "f4c2bff6109faacfc2b94f2b137f365810f7481a6d3a76bb80cbc29b3d8841ae"
       },
       {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "aa63e9f06f6d17700db10ad8710149d9435c4a08107c67f1ee0cc5a05903676f"
+        "at": "2026-11-06T23:04:41+00:00",
+        "id": "3b7fc6d42588ee60027b9b3e12525cbd959377c7bc13d0ccd306c6f45090a7ea"
       },
       {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "f9fc5762dcbab01be1004ad1ae3588498909949a56543daffca1b3457819616f"
+        "at": "2026-11-06T23:04:41+00:00",
+        "id": "cb1f72e00490fd28fcb289712c9d83917fd72883d03ddd0510fea4d56f61ccb2"
       },
       {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "b2345f983ecfe072b72cce8e862e39d7dc7c566a08aa4719716dc2627ff1b842"
+        "at": "2026-11-04T23:59:50+00:00",
+        "id": "2b0e83044534803ff85711d5a355d797600a4b8f21d5b3ceb594c165da9239e3"
       },
       {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "3de9d211df452ffe99afdc0601de5136884b50cb5a2f3943d31ae0e9c0701f10"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "585e7055f4f09884efb55cc261f1eedc6b7fc3f807c5d22903a6615f9079ac99"
       },
       {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "831920b78e40e047d82b74d949aa9a64dd85259bce921dbbd0ca04bb88769531"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "cd42148665083b4eecb21276079e7606b11c20ea19c4fd8855362ea10e48b176"
       },
       {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "1b5c882bc3a0924f687c91a0b02c2254ef5d3817abe7037c86a24adb3f1a635e"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "719b12018b4707acfcf0de623a8e93165c2fd44509a0d39041c95647cd9886f1"
       },
       {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "fbde0308c586cb8a52f26daff450b440b1a943582c10a4bcbe749261bfda8bba"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "3571dfe3165ceda88abf62ad33764658797962890b646aee492831aa257e86e1"
       },
       {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "a91e9df197e0bacd1b357b18faa87d63f291cfe530132e3c922e3fa191159455"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "b128303abdd5d1ba0ab7344de364cb6608074b1374d55e9e647ce101c5877f56"
       },
       {
-        "at": "2026-10-08T23:04:12+00:00",
-        "id": "d97b8fbf9e14233adde034d902f5d133c0400bbb120afd77b11f3689f1faee19"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "50b61e79663fe5779c0533bd2c2bde5837f54df6e5ed4842d4f230ac4db4ddc2"
       },
       {
-        "at": "2026-10-06T22:56:31+00:00",
-        "id": "bae26d9cbb0ceb49c42ceeb78f2b8b5c6c8f76f147fd1a43664d7ee092ca460d"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "62c9d0f36a1289810cae45e3b0780fcffec32c8739f41d2f02835e05a84fec35"
       },
       {
-        "at": "2026-10-06T22:56:31+00:00",
-        "id": "844a6db2f146372de4a7f162355b7533f05ed3e48fbfc8e574b4a1cfce161e87"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "23e542e23f160287519da51de43cc5815ea15720282e66658f10306d96bf8d5e"
       },
       {
-        "at": "2026-10-06T22:56:31+00:00",
-        "id": "eafa07c0b55f166a6c6bb62fa710d2f1d0566d1ead07dbbd01af1b2ff00d0d83"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "cde9f31228bb1def8251daa0bbb474f6dce60697a810d9458016760e111d4dbf"
       },
       {
-        "at": "2026-10-06T22:56:31+00:00",
-        "id": "9f725d6a709a57a924fd036355cf1bafc28e5ad01c996f18ddfaa5a9250935e2"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "14a708afe273cd38e569676d0bae0e6a8e19d8da3ad58d49b10d69868af5d317"
       },
       {
-        "at": "2026-10-06T22:56:31+00:00",
-        "id": "7527e3615902b23c47e4eebc37dce379bdbedcde962f0e1697cfeaab502216fc"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "94097ebdfb6eb1513d963bec4261fd55462265229a49d9298f180aea322bb307"
       },
       {
-        "at": "2026-10-06T22:56:31+00:00",
-        "id": "9effb000af5f26da98377bfbeabe9c38a265bf7aa608dbff0e06f70f19e27e58"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "4eeff2d80619aeb89922afeaf3d13c1a3a88af951b409f96094ada1e56594cd8"
       },
       {
-        "at": "2026-10-06T22:56:31+00:00",
-        "id": "53288291aafdde5655c450074e42303bb4974213b356efc7ce60d89c46024e43"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "253d65c494d8814aa91dd5b9fdc1fadc41b3c98cbb53abe6f9d0a734a8894692"
       },
       {
-        "at": "2026-10-06T22:56:31+00:00",
-        "id": "a0dd46ba71c8cd542783468ba3f60439a9f197c39b0d39bc549dac842b7d8b7f"
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "5667321a766aa3479a992f19d102f2fda464a5353e81c7d60edb2119c0b2f61e"
+      },
+      {
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "f05264531be169a6846ab62287bd0328b851f0164e5043503923f4284ecb2c54"
+      },
+      {
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "5c1d55836e703af9f3e6fce2ae3979772cc72d149a36951c6251cd55536e426d"
+      },
+      {
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "8bd6e58b95210c90891c2c50d66f70c3d4b735d80f99978f72950f40fdb99c04"
+      },
+      {
+        "at": "2026-11-05T23:59:28+00:00",
+        "id": "59232f8d1dadb08432c3e2e16272cfafa99cd2e98a5ab664c38894bc21f454f2"
+      },
+      {
+        "at": "2026-11-04T23:59:50+00:00",
+        "id": "8a290e0d71c5e64152d540c4431fab321b5fc86ea24bfcfefccce924e1fe5b54"
+      },
+      {
+        "at": "2026-11-04T23:59:50+00:00",
+        "id": "ecc5cc1dacda10ab2265635bac23c7cf34712231dd4a648a445cf28df868a5d0"
+      },
+      {
+        "at": "2026-11-04T23:59:50+00:00",
+        "id": "f85fe6aeb14ae088de4405368263f90c109a12e2a01f04c3877fb7186138ca48"
+      },
+      {
+        "at": "2026-11-04T23:59:50+00:00",
+        "id": "5afc766c3394324acc18caea9c2ec5157cda9d319e00bb1a186d047241d4e6d8"
+      },
+      {
+        "at": "2026-11-04T23:59:50+00:00",
+        "id": "6f570e9df5104018a8ee4662d784eb23110e5e52ae689f681148174a47be736f"
+      },
+      {
+        "at": "2026-11-04T23:59:50+00:00",
+        "id": "a4be2ef8fc6b7cbbce90da097e36374ce685ea59265dd3d944a05653a926d306"
       }
     ],
-    "items_30d": 462,
-    "items_last_run": 2273,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "items_30d": 465,
+    "items_last_run": 2296,
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": null,
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
-    "newest_item_at": "2026-11-04T00:02:09+00:00",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
+    "newest_item_at": "2026-11-06T23:04:41+00:00",
     "resolved_feed_url": "https://www.microsoft.com/releasecommunications/api/v2/m365/rss",
     "suspended_since": null
   },
   "cat-blog": {
     "consecutive_failures": 0,
-    "etag": "W/\"6ae64545-1b780\"",
+    "etag": "W/\"6aed0443-1b780\"",
     "health": "healthy",
     "item_dates": [
       {
@@ -1883,35 +1895,35 @@
       }
     ],
     "items_30d": 3,
-    "items_last_run": 0,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "items_last_run": 5,
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Sat, 31 Oct 2026 19:45:09 GMT",
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
+    "last_modified": "Thu, 05 Nov 2026 22:33:39 GMT",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
     "newest_item_at": "2026-10-29T00:00:00+00:00",
     "resolved_feed_url": "https://microsoft.github.io/mcscatblog/feed",
     "suspended_since": null
   },
   "copilot-studio-release-notes": {
     "consecutive_failures": 0,
-    "etag": "\"lunCW1HNlJ8GCwgaZPCt7k2ahJc=\"",
+    "etag": "\"2WL4OfnOIe2a8UDFP8CUPsxeRD8=\"",
     "health": "healthy",
     "item_dates": [],
     "items_30d": 0,
     "items_last_run": 0,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": "Mon, 24 Aug 2026 18:22:53 GMT",
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
     "newest_item_at": null,
     "resolved_feed_url": null,
     "suspended_since": null
   },
   "copilot-studio-whats-new": {
     "consecutive_failures": 0,
-    "etag": "\"W81v/1BIw3s8b/kF+mgjBP35HlY=\"",
+    "etag": "\"GxHWAqPLYDQQkCW56u4bFW0HO7A=\"",
     "health": "healthy",
     "item_dates": [
       {
@@ -1921,18 +1933,18 @@
     ],
     "items_30d": 1,
     "items_last_run": 0,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": "Wed, 04 Nov 2026 19:08:25 GMT",
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
     "newest_item_at": "2026-11-04T19:33:18.207512+00:00",
     "resolved_feed_url": null,
     "suspended_since": null
   },
   "devblogs-all": {
     "consecutive_failures": 0,
-    "etag": "W/\"45f41eb13d13caa4c9a22d4dfb881729\"",
+    "etag": "W/\"14f3408b3e206378533f49e79147a5c2\"",
     "health": "healthy",
     "item_dates": [
       {
@@ -1952,36 +1964,24 @@
         "id": "5e5f2403446d1e3e959163fb222b7085ff625fae186450f144d5d8a9c36ded18"
       },
       {
-        "at": "2026-10-09T09:44:25+00:00",
-        "id": "be5e504cf45b3d8c7226a508f2bfe92edfa27b56a3b5f6d0f26bfe5cafe7ca4e"
-      },
-      {
-        "at": "2026-10-07T15:00:26+00:00",
-        "id": "df4be6f3b63827e6f39130c1d89113a1a081ea4dbe42594fae31a6c327407c86"
-      },
-      {
-        "at": "2026-10-06T18:30:00+00:00",
-        "id": "0082b21d38cb2fed29132ca3d5ca25dd47389e5420cf0e0dc88b3a1aab6ec62b"
-      },
-      {
-        "at": "2026-10-06T09:18:05+00:00",
-        "id": "3c083504fded628aa12359b9053f46bcab6e680f5e682f47f7a0375f550f3998"
+        "at": "2026-11-05T15:40:49+00:00",
+        "id": "f96e957d20b3235dbc1fd1082230899837340a372136a0ae2f9795a0e0fc6820"
       }
     ],
-    "items_30d": 8,
-    "items_last_run": 0,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "items_30d": 5,
+    "items_last_run": 10,
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Wed, 04 Nov 2026 11:48:50 GMT",
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
-    "newest_item_at": "2026-10-30T12:49:14+00:00",
+    "last_modified": "Sun, 08 Nov 2026 04:52:20 GMT",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
+    "newest_item_at": "2026-11-05T15:40:49+00:00",
     "resolved_feed_url": "https://devblogs.microsoft.com/feed/",
     "suspended_since": null
   },
   "dynamics-blog": {
     "consecutive_failures": 0,
-    "etag": "\"114b529e7285a2fd24c3b1a550748ec0-gzip\"",
+    "etag": "\"eadeba3105bc1dba9e3f1d51688ed1c3-gzip\"",
     "health": "healthy",
     "item_dates": [
       {
@@ -2013,14 +2013,6 @@
         "id": "615a99758ce2262c453562d8388d8b5aa88669566be54f2e885a7e1f2474db91"
       },
       {
-        "at": "2026-10-08T15:10:00+00:00",
-        "id": "8cdba707ca078131e5b0ef625051e6cc2e48ac14f13e47e39ee6129a401f4cc5"
-      },
-      {
-        "at": "2026-10-08T15:00:00+00:00",
-        "id": "5a074a37b0336b575eb2cdb381ab8f642b589b4a9d52b3983abda89d7437d716"
-      },
-      {
         "at": "2026-11-03T16:30:00+00:00",
         "id": "4d4f6db636aceee675a3b15e6854a2e34553bddeb8234582cddce5f6053428c0"
       },
@@ -2031,22 +2023,30 @@
       {
         "at": "2026-11-02T16:00:00+00:00",
         "id": "e8638e21cd39b3eddb3a08aad2e2a5a93367dd4436f85b19fbaabcfb84424e31"
+      },
+      {
+        "at": "2026-11-06T19:00:00+00:00",
+        "id": "dc03e75ef2b0552b747d344c73236b7b76a700c32e7d435604393f4258de6927"
+      },
+      {
+        "at": "2026-11-05T18:30:00+00:00",
+        "id": "2f19cea429cd7af0e7d7caf210067a1b9d7b1b8a5d88f0a4e6394d39d2c28004"
       }
     ],
     "items_30d": 12,
-    "items_last_run": 0,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "items_last_run": 10,
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Tue, 03 Nov 2026 16:30:00 GMT",
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
-    "newest_item_at": "2026-11-03T16:30:00+00:00",
+    "last_modified": "Sat, 07 Nov 2026 00:14:40 GMT",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
+    "newest_item_at": "2026-11-06T19:00:00+00:00",
     "resolved_feed_url": "https://www.microsoft.com/en-us/dynamics-365/blog/feed/",
     "suspended_since": null
   },
   "foundry-blog": {
     "consecutive_failures": 0,
-    "etag": "W/\"09f2ea77964c3a0a2001d9e742be3ce2\"",
+    "etag": "W/\"00a31603b88aa0a9b9caa5a2eb0085d9\"",
     "health": "healthy",
     "item_dates": [
       {
@@ -2074,18 +2074,26 @@
         "id": "cb38b64afee8ab9cdccf6c7386f69b152f593b1ed7e352cbd02a4176a192b7d5"
       },
       {
-        "at": "2026-10-07T18:45:01+00:00",
-        "id": "2c4e7f2fd465241d3296208b1b363bf58d3a3c69fbb4bd73283cad83bb1b8675"
+        "at": "2026-11-05T20:55:45+00:00",
+        "id": "bd70f056b2cbac60c1d2d1baac0c308385b21b76b67e81b5ffed66c937b8d5ed"
+      },
+      {
+        "at": "2026-11-05T14:00:38+00:00",
+        "id": "325ee78cf209aa479c8383e5575e74451dfd227a04c5c386f7d627227f1ac17d"
+      },
+      {
+        "at": "2026-11-05T11:40:48+00:00",
+        "id": "0bac145440efbf21c545871fef04d3870aefe60a6e4f76696633d654d29ea22b"
       }
     ],
-    "items_30d": 7,
+    "items_30d": 9,
     "items_last_run": 10,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Thu, 05 Nov 2026 00:28:56 GMT",
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
-    "newest_item_at": "2026-10-28T16:45:06+00:00",
+    "last_modified": "Sat, 07 Nov 2026 02:15:49 GMT",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
+    "newest_item_at": "2026-11-05T20:55:45+00:00",
     "resolved_feed_url": "https://devblogs.microsoft.com/foundry/feed/",
     "suspended_since": null
   },
@@ -2096,7 +2104,7 @@
     "item_dates": [],
     "items_30d": 0,
     "items_last_run": 0,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": null,
@@ -2107,16 +2115,16 @@
   },
   "github-product-news": {
     "consecutive_failures": 0,
-    "etag": "W/\"18000d5e43b74453494fa46697319cde\"",
+    "etag": "W/\"b0f60c47feafc6f31503a1d686c2a088\"",
     "health": "stale",
     "item_dates": [],
     "items_30d": 0,
     "items_last_run": 10,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Wed, 04 Nov 2026 20:11:41 GMT",
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
+    "last_modified": "Sat, 07 Nov 2026 00:30:57 GMT",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
     "newest_item_at": "2026-06-02T17:30:03+00:00",
     "resolved_feed_url": "https://github.blog/news-insights/product-news/feed/",
     "suspended_since": null
@@ -2125,21 +2133,26 @@
     "consecutive_failures": 0,
     "etag": null,
     "health": "healthy",
-    "item_dates": [],
-    "items_30d": 0,
-    "items_last_run": 0,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "item_dates": [
+      {
+        "at": "2026-11-09T13:36:37.015254+00:00",
+        "id": "a642b1d644c9e4424582a43442d6f46a660780b526822c46e5aba94d05f924cd"
+      }
+    ],
+    "items_30d": 1,
+    "items_last_run": 1,
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": null,
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
-    "newest_item_at": null,
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
+    "newest_item_at": "2026-11-09T13:36:37.015254+00:00",
     "resolved_feed_url": null,
     "suspended_since": null
   },
   "message-center": {
     "consecutive_failures": 0,
-    "etag": "W/\"6aeba275-60165\"",
+    "etag": "W/\"6af17e0a-60280\"",
     "health": "healthy",
     "item_dates": [
       {
@@ -2279,7 +2292,7 @@
         "id": "b8c473f4cb3c1a774a0ab517bc144194d40610e5ecc1c14d541ce4251b277ba4"
       },
       {
-        "at": "2026-11-03T16:59:28+00:00",
+        "at": "2026-11-06T16:54:35+00:00",
         "id": "ce4b59319315fa5872add88f665fd59eb0d1dd1a34fadea614b63c4a8b6675c1"
       },
       {
@@ -2295,7 +2308,7 @@
         "id": "65ce1c88652804d410bf77e77ecd51daa07c8981313144d900083ea704e170d6"
       },
       {
-        "at": "2026-11-03T01:38:44+00:00",
+        "at": "2026-11-05T17:32:51+00:00",
         "id": "f4e909040bb204b73c407d04bfbb0bcf3ba6f258ed8aa76538d322576aa75d30"
       },
       {
@@ -2539,7 +2552,7 @@
         "id": "cde6e2513fe276fdfd6485ac6fc16196eed0a62578a3717293097543928458de"
       },
       {
-        "at": "2026-10-29T18:34:28+00:00",
+        "at": "2026-11-06T21:05:46+00:00",
         "id": "a3ede779e938626d4fc411e5aaa714a2ee926b6a87c09c29b33ec6b661c0217f"
       },
       {
@@ -2787,7 +2800,7 @@
         "id": "8040800000d4ce3c40407b0a6e952086f0dc09805c4fc7dd61ce22e240deacb9"
       },
       {
-        "at": "2026-10-23T23:08:12+00:00",
+        "at": "2026-11-05T17:48:29+00:00",
         "id": "d66d537ba5f81c8610781576f85392069761308fdc41960094d11bec1532454f"
       },
       {
@@ -2927,7 +2940,7 @@
         "id": "4e2fcb121017d331776d7a9d8d35883d81b19bfb10aeb52f33ab1a52abc6aff8"
       },
       {
-        "at": "2026-10-21T16:13:05+00:00",
+        "at": "2026-11-07T00:00:59+00:00",
         "id": "507e7e0a30678a857869a12ea545cb82dc0747a21f5d2d521326ae9ab00cf36b"
       },
       {
@@ -2995,7 +3008,7 @@
         "id": "3628ce22e6f8c98f1b1b5c29b98e94ade234921083621f51023496736b91db1b"
       },
       {
-        "at": "2026-10-19T23:29:50+00:00",
+        "at": "2026-11-04T22:12:29+00:00",
         "id": "f5f7c8707e7095e06a656323c5c4a1035a98e6b86c5add83780e19f0375e36ba"
       },
       {
@@ -3071,7 +3084,7 @@
         "id": "bd12c603ff7030594eb45bc875a3497c1c44809fd8767185b0234d3108e05475"
       },
       {
-        "at": "2026-10-16T20:38:36+00:00",
+        "at": "2026-11-06T18:23:42+00:00",
         "id": "97cffac0ba125daff31a2e1d669a9ffe837a01633b06cea14a94048a54d306e3"
       },
       {
@@ -3171,7 +3184,7 @@
         "id": "9871508bbca962dd4d2b0d866f930fde968360d277e9a1eaf9f3985fa2117f9f"
       },
       {
-        "at": "2026-10-15T16:43:45+00:00",
+        "at": "2026-11-05T21:51:00+00:00",
         "id": "eada3b069f515dc528f661eb87a54c40450785f8c124dcd99de2ea43485f2f18"
       },
       {
@@ -3311,7 +3324,7 @@
         "id": "9bcc7f4a4537ea8499a40c589f8d518aea6a6706c3a3b5bdd08d9045a3e2db9a"
       },
       {
-        "at": "2026-10-12T20:52:31+00:00",
+        "at": "2026-11-04T22:06:47+00:00",
         "id": "dcc338f5bc6dcaabee0220be9233cb545607830ab8a6547fd076df72fea752ac"
       },
       {
@@ -3335,204 +3348,8 @@
         "id": "882f0c5441abac4ecc3d753e0650260dc3b0c6f5440fa13a61a28bbfdc91a6fb"
       },
       {
-        "at": "2026-10-09T23:12:05+00:00",
-        "id": "0d9fafc1f5522cf3aa8e70185c7cd996a5d4126fdd558404472e25f49e09e34b"
-      },
-      {
-        "at": "2026-10-09T20:43:28+00:00",
-        "id": "9438671384d3095de3b3198df503f78e58f427d8867eac5e7ab5a58785eac138"
-      },
-      {
-        "at": "2026-10-09T20:41:36+00:00",
-        "id": "a16bc50e66eab09b8d961a76a47d20aa32d03b9d6d9c2a698d9a84084715af1a"
-      },
-      {
-        "at": "2026-10-09T20:40:31+00:00",
-        "id": "d7339780a855875d203e05b8653d2c32b5a7881e3eecb5bb79f3c07ae8bf861c"
-      },
-      {
-        "at": "2026-10-09T19:24:44+00:00",
-        "id": "7743845f03b15b86d78b84cfc74146bb93a1e3e13f620e7c0a050c01ddd0c9b6"
-      },
-      {
-        "at": "2026-10-09T17:07:35+00:00",
-        "id": "4f980f09662973704ddeaec60350291991b1b853c4b3b7875697f5da9d56c202"
-      },
-      {
-        "at": "2026-10-09T04:05:05+00:00",
-        "id": "c011ae6e1bde8ddd2859e7cb6d9f0a71f746347c4a3aca1ef228404af62ee627"
-      },
-      {
-        "at": "2026-10-08T23:14:54+00:00",
+        "at": "2026-11-06T22:11:03+00:00",
         "id": "a37305c1f387ee16afdf406f0ce3c2a988fe08dabd38b4ce42cd7c77d79309ed"
-      },
-      {
-        "at": "2026-10-08T23:14:30+00:00",
-        "id": "b2378940b27b8a80be5470b4d2cff8a56165fab8e9116ed751c5fb2b624cf649"
-      },
-      {
-        "at": "2026-10-08T23:14:07+00:00",
-        "id": "04211ce3665406868425cfd4d13f1d4691eee2303e2bcf8d4ff24f7d64d665af"
-      },
-      {
-        "at": "2026-10-08T23:12:57+00:00",
-        "id": "54f9d5c11387d339d6a15116977617ab0419ece242ed967dc75ac9427551b077"
-      },
-      {
-        "at": "2026-10-08T23:11:10+00:00",
-        "id": "7059b82d3614ed78aa5387266c2459872c8fb0168f545c239483f131099a393c"
-      },
-      {
-        "at": "2026-10-08T23:10:48+00:00",
-        "id": "9f14060f5ef8f7e088a0cf7695fe84533ac2a80484cdce104a4accb76416ab80"
-      },
-      {
-        "at": "2026-10-08T23:10:23+00:00",
-        "id": "2e382a0bb177e6ae33476b11fa73b128fccc0e4f4817179eeee153b3d83b141d"
-      },
-      {
-        "at": "2026-10-08T23:09:37+00:00",
-        "id": "9dc7fd7abe7ebab15e2a07ddaad8088ba345da94f16cb80db5fc7272b612b121"
-      },
-      {
-        "at": "2026-10-08T23:08:59+00:00",
-        "id": "ddd88ea706bdb5d04c99c082e89bbd9171ed40754c618e0952a9ba21438d8597"
-      },
-      {
-        "at": "2026-10-08T23:02:43+00:00",
-        "id": "105c4fc79a2ee5fa1bf7d717086dc768eba52fe89a062fe58882b28024c6a65c"
-      },
-      {
-        "at": "2026-10-08T22:06:07+00:00",
-        "id": "989eda418080dbb3f707943775f13ee14fe56796368440839d68bb9e1457f60e"
-      },
-      {
-        "at": "2026-10-08T18:57:24+00:00",
-        "id": "77e69152fb691effc5a95a9c8d8f32b0eed64c2e0ee52c44f5f74b37a2e4356e"
-      },
-      {
-        "at": "2026-10-08T18:54:25+00:00",
-        "id": "231e39a7b18602f9d3d5f2b17c9f5f27466fb5a2f010a2d3db3920f56a33d566"
-      },
-      {
-        "at": "2026-10-08T17:15:07+00:00",
-        "id": "85f7c1a081dc29637ff4918bf7de5893424a55cb33c1ba65b50a6d50168f45b6"
-      },
-      {
-        "at": "2026-10-08T17:15:03+00:00",
-        "id": "5a4e8fbf691cd746b402b1249ec86c2cc4cfe84ae5455cbe9b2d46bd85215fa1"
-      },
-      {
-        "at": "2026-10-08T16:15:41+00:00",
-        "id": "31fcf16c8ae79088af9d799407039f0c686e84648278ca966a10fb8eef52085c"
-      },
-      {
-        "at": "2026-10-07T23:31:30+00:00",
-        "id": "d7eb4ed4fc4cebe4d05db4d89bfe470054f1d5159e5aaecd828edd2e122a9827"
-      },
-      {
-        "at": "2026-10-07T23:26:36+00:00",
-        "id": "84cd807dd379a339b7b74aaad7f5f17ba8b119fa64c3793afb8e7c7e349a43cc"
-      },
-      {
-        "at": "2026-10-07T22:37:46+00:00",
-        "id": "e998fc66a7bde932b0a80cf3873dc73359e0a71055fddc154e6e7e3d52f19adb"
-      },
-      {
-        "at": "2026-10-07T22:37:22+00:00",
-        "id": "567ffdf317767cd09a718e592663834f283b9a4718528f6dc9acdafdc56b496c"
-      },
-      {
-        "at": "2026-10-07T22:28:59+00:00",
-        "id": "f32689bbbf584b26cc246de04f5b0230d8a2daa9441036eb0839061b43d32e63"
-      },
-      {
-        "at": "2026-10-07T22:28:29+00:00",
-        "id": "1287ec5c4034884840f4f2dca59c2a5a106e9e1a425c7919891421e33f5a7a26"
-      },
-      {
-        "at": "2026-10-07T22:26:44+00:00",
-        "id": "ec4ef0f4da70f3acb9777626e3b9b7c6a0ab0a7590da6df5a03415022f15ddf5"
-      },
-      {
-        "at": "2026-10-07T22:24:44+00:00",
-        "id": "269c3c2dcdb9f27237343e876bb496bd1784a3de33dafe2964f027ed918ea900"
-      },
-      {
-        "at": "2026-10-07T22:22:55+00:00",
-        "id": "48619e6e2f19b4cdce69e92a739eeae8ef8fe9cf84d6717c39723e020719dae3"
-      },
-      {
-        "at": "2026-10-07T22:11:19+00:00",
-        "id": "6de7a0ed38bdd9df050c0fd93cbd55effaafd18a265d70044e59be5040e918ae"
-      },
-      {
-        "at": "2026-10-07T18:10:08+00:00",
-        "id": "9447875acccca0a2f4d73f5333c146d47948093f084ce11fcae8a7c5ad02dfda"
-      },
-      {
-        "at": "2026-10-07T16:19:48+00:00",
-        "id": "7e9584bc9948a1f6014950daf54d10a63c69911df3f9096ee2eb49f126ac6c92"
-      },
-      {
-        "at": "2026-10-06T23:44:52+00:00",
-        "id": "92b6cde4f542f53063f57e90aa3e51e824af49b8bb05697ba764029cfc1c5201"
-      },
-      {
-        "at": "2026-10-06T23:08:03+00:00",
-        "id": "abd206f0f4b42c3ffddb7ad438debd3a989f890a9a2d11b5cc5eca771e8732f5"
-      },
-      {
-        "at": "2026-10-06T22:51:50+00:00",
-        "id": "673d3ae178c42296809ce679a76a8dee152ae3c896b61fec3b0ef574173b7fbe"
-      },
-      {
-        "at": "2026-10-06T22:51:07+00:00",
-        "id": "64fbca7ff1b89c0b5a225845a81c8711ffef08782c06a257c1c3a313b5a38aca"
-      },
-      {
-        "at": "2026-10-06T22:11:37+00:00",
-        "id": "5891f97e319050b9be2612cc5ba0c2c00e70b629e401c4dca9e50ab2720723f3"
-      },
-      {
-        "at": "2026-10-06T19:56:23+00:00",
-        "id": "00c9a782ed623cc87ee1d352b73529fe75038851c00822a873721a9986c5b311"
-      },
-      {
-        "at": "2026-10-06T18:06:08+00:00",
-        "id": "34dc312306c83cc6624f98bf40797190dadb4a8baa2a73778608a123b5e7bf3b"
-      },
-      {
-        "at": "2026-10-06T17:09:18+00:00",
-        "id": "3ae5db5dac3c0d83d93b020c04ab5037af7197249597fbd56686a991d9dcb8f0"
-      },
-      {
-        "at": "2026-10-06T17:06:38+00:00",
-        "id": "315be95b8eedfd7e1b41bce4ae0f0a906399cae643798a884ac7fc3a0681236c"
-      },
-      {
-        "at": "2026-10-06T17:03:56+00:00",
-        "id": "6139e2b69686e7dcfabec0297bd73b2c25b320c6ebde432beb83883be4fcacd9"
-      },
-      {
-        "at": "2026-10-06T17:01:24+00:00",
-        "id": "d828b0a0a1f258ef53d08e76ec7b7970fe8fff5ff2bd0d48354deddf6a82d74c"
-      },
-      {
-        "at": "2026-10-06T16:58:38+00:00",
-        "id": "7b8b7c396c810b7f922b95da450b7b8e20534ded18a305d751dbe380ba12a745"
-      },
-      {
-        "at": "2026-10-06T16:27:10+00:00",
-        "id": "53ae8724bfd783babcbb6273019993c5d129423f2f75ae83e6d3296e8c5db0d2"
-      },
-      {
-        "at": "2026-10-06T16:02:36+00:00",
-        "id": "b5c47cc81989a861cf96a1b1114c71b7a7433f82071b093aff712ae4eae0f3c8"
-      },
-      {
-        "at": "2026-10-06T16:01:57+00:00",
-        "id": "184ecc5bd5cd0a5a1d9c6c18041498c1cbca44f586976d89363964203b25aa4f"
       },
       {
         "at": "2026-11-04T18:45:17+00:00",
@@ -3541,47 +3358,171 @@
       {
         "at": "2026-11-04T17:31:19+00:00",
         "id": "166f1192c9e5ab8001e2e4d73cc950ceace5de0881336012595416a16abde439"
+      },
+      {
+        "at": "2026-11-06T22:04:35+00:00",
+        "id": "59ddb84404dd9099358435b6d30a8084a57daa47e4dddb6619ce6d523e6f4de3"
+      },
+      {
+        "at": "2026-11-06T21:34:19+00:00",
+        "id": "db5831eb7d631f6f24c91bf012fcc1df576f74bd46b3e695d56edc6a58ec956f"
+      },
+      {
+        "at": "2026-11-06T21:32:47+00:00",
+        "id": "9f434cb830ce5f8ec78f66c8c0669210159c0f78160851493833698791c433db"
+      },
+      {
+        "at": "2026-11-06T21:20:50+00:00",
+        "id": "9ad10131771588d4e315a87aacd9e3278866feb9ad761b484908782f0dbad8da"
+      },
+      {
+        "at": "2026-11-06T17:17:16+00:00",
+        "id": "7ad8a38d2363576c280c9e23de1c7dd1a24ac06d9408dd562ef51f9b9fe8bdea"
+      },
+      {
+        "at": "2026-11-06T17:12:04+00:00",
+        "id": "d8bc26d9d8f852c944e896f9940729a2c31504e447409f4cf298ba40c3249699"
+      },
+      {
+        "at": "2026-11-06T17:09:16+00:00",
+        "id": "778e384db9dd4d10890e8ffc2d493344e924bd2e02a747f5a1681dd05561fd7c"
+      },
+      {
+        "at": "2026-11-06T17:06:43+00:00",
+        "id": "ad74d212cb2b02adf7a59579e1498222f78fa56356292ba0c067ce41d39dbec6"
+      },
+      {
+        "at": "2026-11-06T02:59:24+00:00",
+        "id": "3f728a55d1f13b81bceae729127e9719c34a9093398cc84e1db9f9eb5c05849a"
+      },
+      {
+        "at": "2026-11-05T23:11:29+00:00",
+        "id": "5adf9c009f30714451b907a61ae5cda6af44c62c7ec925a93967fcf23430e796"
+      },
+      {
+        "at": "2026-11-05T21:23:22+00:00",
+        "id": "0ca5746a0e18d43e9a5a35dbfd92eb40d85b49378c3f1c0e37279f4187ed00b1"
+      },
+      {
+        "at": "2026-11-05T21:22:21+00:00",
+        "id": "1dcebc0a70be1afb219e13b963fe1e83943fbe5a5fcfa74cbee0b0670e6890be"
+      },
+      {
+        "at": "2026-11-05T21:21:40+00:00",
+        "id": "80e456fd5da3d23006dee4470210adafce64c584c610239a99f40957840e62b6"
+      },
+      {
+        "at": "2026-11-05T21:20:57+00:00",
+        "id": "52fb9a91e3c831172fa5983488f7fdca5368888a1d54b8f2c326aa735f3b06cb"
+      },
+      {
+        "at": "2026-11-05T21:18:24+00:00",
+        "id": "ba7cf8fbc48d76d406aced89e3dbc00aaf8317c9de480f3dcc6ba4b5158e4190"
+      },
+      {
+        "at": "2026-11-05T21:16:48+00:00",
+        "id": "0c108319c6b4fcb6f402bcb8c86828b64b0c112c04b70b36cf5c957fd45aba4e"
+      },
+      {
+        "at": "2026-11-05T21:12:57+00:00",
+        "id": "23c5193a3f4efebd210cc78090831ef63da87e5118915406406ca8bb5c886774"
+      },
+      {
+        "at": "2026-11-05T21:11:47+00:00",
+        "id": "529966cab986148791193da9277dca67365a1ad18fd371dcdeec43319084c9b8"
+      },
+      {
+        "at": "2026-11-05T20:38:44+00:00",
+        "id": "4f22f92d5085915e886016f809939d2ccf2c390d2d15528715f599780274aeb2"
+      },
+      {
+        "at": "2026-11-05T20:31:33+00:00",
+        "id": "86011dc6ac7173f071b5a528a09e741b11342af641808700e6844cc1c2df1276"
+      },
+      {
+        "at": "2026-11-05T19:58:32+00:00",
+        "id": "1355095cd3111d7ef0a47c742b897656a2c910ce92be7e36f577ce584397b42f"
+      },
+      {
+        "at": "2026-11-05T18:19:10+00:00",
+        "id": "7568d30be90ed02bc75536e3d9533b5313d0a93ab72d2d7d9a63f8609c7f5710"
+      },
+      {
+        "at": "2026-11-05T18:00:36+00:00",
+        "id": "7a0748b601a1d80f0d543e00f8c3a37b2bbf359807644b9f86438518a8f13887"
+      },
+      {
+        "at": "2026-11-05T00:13:47+00:00",
+        "id": "aa1a052bb00d0911c77bcd674bb6b450afff576b93d77d6da7d3fc80261624be"
+      },
+      {
+        "at": "2026-11-05T00:12:28+00:00",
+        "id": "fec648831f73256be5b2d9f74f26a958c8b054363845a728165b23ad70fdd6d6"
+      },
+      {
+        "at": "2026-11-05T00:11:53+00:00",
+        "id": "6bec89b8a8631c0a7f7989d1187367beb4a7d5a44759b4d1de2f19838939d6e3"
+      },
+      {
+        "at": "2026-11-05T00:10:46+00:00",
+        "id": "b0c8b0dda5979500e4e0918a142c1ec990f0a2645febb21559737719383def61"
+      },
+      {
+        "at": "2026-11-05T00:09:19+00:00",
+        "id": "d080c5a36e22cfbe606cd4e4cddb5da72e2e5bf67271910325e6c3a623908bbd"
+      },
+      {
+        "at": "2026-11-05T00:08:30+00:00",
+        "id": "d8b6125d6fa1b021941e3f67cf6e778724a71fa3dbae01e99b0b4c762278f96d"
+      },
+      {
+        "at": "2026-11-05T00:07:36+00:00",
+        "id": "4a5d73c0f157a26bd399f9581a3bdc30fe89c6d186ed2232185ffef542b56ff8"
+      },
+      {
+        "at": "2026-11-04T23:42:05+00:00",
+        "id": "5e77f9e2ba07a6039fb6a0d71164f0a7ce324cc5f78f94061a8021a14ce3db06"
+      },
+      {
+        "at": "2026-11-04T23:10:47+00:00",
+        "id": "67f7a4b4c63e3ffb10e566e0142df05ef5faccd3ffcf1aeb33a93d58717cc79e"
       }
     ],
-    "items_30d": 350,
-    "items_last_run": 0,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "items_30d": 333,
+    "items_last_run": 500,
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Wed, 04 Nov 2026 21:24:05 GMT",
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
-    "newest_item_at": "2026-11-04T20:12:11+00:00",
+    "last_modified": "Mon, 09 Nov 2026 08:02:18 GMT",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
+    "newest_item_at": "2026-11-07T00:00:59+00:00",
     "resolved_feed_url": "https://mc.merill.net/rss.xml",
     "suspended_since": null
   },
   "msft-copilot-blog": {
     "consecutive_failures": 0,
-    "etag": "\"5752ef36d76ebbf632fa91948626bfe0-gzip\"",
-    "health": "healthy",
+    "etag": "\"064a7164188d3cdcd0c091d96c58907b-gzip\"",
+    "health": "stale",
     "item_dates": [
       {
         "at": "2026-10-27T16:00:00+00:00",
         "id": "a19ec6c0d78fb26ee611daf99fad4b770fd1e6d6afb29b9661adae4f11c29952"
-      },
-      {
-        "at": "2026-10-08T15:00:00+00:00",
-        "id": "8cdba707ca078131e5b0ef625051e6cc2e48ac14f13e47e39ee6129a401f4cc5"
       }
     ],
-    "items_30d": 2,
-    "items_last_run": 0,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "items_30d": 1,
+    "items_last_run": 10,
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Wed, 23 Sep 2026 23:43:50 GMT",
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
-    "newest_item_at": "2026-10-27T16:00:00+00:00",
+    "last_modified": "Fri, 25 Sep 2026 13:39:26 GMT",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
+    "newest_item_at": "2026-09-25T12:07:25+00:00",
     "resolved_feed_url": "https://www.microsoft.com/en-us/copilot/blog/feed/",
     "suspended_since": null
   },
   "powerplatform-blog": {
     "consecutive_failures": 0,
-    "etag": "\"bd3d974ea49d0e7fa0eed68867084b54-gzip\"",
+    "etag": "\"f8374d4baa1e07353902530f925a34f8-gzip\"",
     "health": "healthy",
     "item_dates": [
       {
@@ -3613,10 +3554,6 @@
         "id": "c75c426f9f67dac83605c38e0b3fb9a6c6a37548eba5ee402306a9979ce5ad36"
       },
       {
-        "at": "2026-10-08T12:36:38+00:00",
-        "id": "4a4e6fc362f39e2af11dfd78e36b9cbd65a982c5015b519e5d7dcb5ec3fa626f"
-      },
-      {
         "at": "2026-11-02T16:00:00+00:00",
         "id": "740eb5fa34f5a8839b3532c0429e94f9cb765520e70c98e4bf7ca22f46a213dd"
       },
@@ -3625,13 +3562,13 @@
         "id": "994910357955a9ee29cf70cf6008e2fd21a3b5bf02780d8efdf12663fb7ace1f"
       }
     ],
-    "items_30d": 10,
-    "items_last_run": 0,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "items_30d": 9,
+    "items_last_run": 10,
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Mon, 02 Nov 2026 21:06:15 GMT",
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
+    "last_modified": "Wed, 04 Nov 2026 09:28:12 GMT",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
     "newest_item_at": "2026-11-02T16:00:00+00:00",
     "resolved_feed_url": "https://www.microsoft.com/en-us/power-platform/blog/feed/",
     "suspended_since": null
@@ -3643,7 +3580,7 @@
     "item_dates": [],
     "items_30d": 0,
     "items_last_run": 0,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": null,
@@ -3654,7 +3591,7 @@
   },
   "security-blog": {
     "consecutive_failures": 0,
-    "etag": "\"7a54a09513ed97ffb348d8d30855eace-gzip\"",
+    "etag": "\"407dcd9384d49428541e503afa88057d-gzip\"",
     "health": "healthy",
     "item_dates": [
       {
@@ -3696,16 +3633,36 @@
       {
         "at": "2026-10-21T18:23:55+00:00",
         "id": "f111d392dd54d86d297c32ca1d7e2c452d3b4c16776c8b9d7617330b1a45d7ab"
+      },
+      {
+        "at": "2026-11-07T02:44:34+00:00",
+        "id": "631279c95e341729df947e8841c903a72b2a5358993b63ed9c9b25acbcc62d87"
+      },
+      {
+        "at": "2026-11-05T23:46:50+00:00",
+        "id": "4b6abbdbb70347fe3aefcfcc544d65add6f5333a6139e1ee3894ebf9488615f5"
+      },
+      {
+        "at": "2026-11-05T17:10:14+00:00",
+        "id": "eef56bdea241403e091c0d1e42aeee5cadb871682f5280512a792a90dd2d06c5"
+      },
+      {
+        "at": "2026-11-05T17:00:00+00:00",
+        "id": "d97887a156f724a205ab0d01a172a028535ec6ed2135e59cfb6e2f7100b0d9b4"
+      },
+      {
+        "at": "2026-11-05T16:00:00+00:00",
+        "id": "42dccc485f1f6ef51f3fba454d84f48a15b566e15cf9a50d369c213d0c6f8ac5"
       }
     ],
-    "items_30d": 10,
-    "items_last_run": 0,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "items_30d": 15,
+    "items_last_run": 10,
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
-    "last_modified": "Wed, 04 Nov 2026 23:10:52 GMT",
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
-    "newest_item_at": "2026-11-03T17:32:47+00:00",
+    "last_modified": "Sat, 07 Nov 2026 05:06:21 GMT",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
+    "newest_item_at": "2026-11-07T02:44:34+00:00",
     "resolved_feed_url": "https://www.microsoft.com/en-us/security/blog/feed/",
     "suspended_since": null
   },
@@ -3753,23 +3710,15 @@
       {
         "at": "2026-10-12T16:24:05+00:00",
         "id": "01c6770694452cb6bd9941f536ee60def0c25b9ab874fd9cc60bf24d1bb242a2"
-      },
-      {
-        "at": "2026-10-09T19:25:48+00:00",
-        "id": "ea573e6e3faceaf94e366a9372152b66ed376aeb26e0f6d10be2bee6cf478661"
-      },
-      {
-        "at": "2026-10-08T19:19:32+00:00",
-        "id": "b73a2ff927d52c44c309011a09dd4450895d2c2df08d49d57569a1fa7d52947b"
       }
     ],
-    "items_30d": 12,
+    "items_30d": 10,
     "items_last_run": 20,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": null,
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
     "newest_item_at": "2026-11-03T21:32:55+00:00",
     "resolved_feed_url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=microsoft-copilot-blog",
     "suspended_since": null
@@ -3798,16 +3747,20 @@
       {
         "at": "2026-11-03T20:13:26+00:00",
         "id": "eb621c6d1fbf34ad2a150aeae5214a75fc408a0bdcd914a540a53f1e678cb2e8"
+      },
+      {
+        "at": "2026-11-07T17:42:49+00:00",
+        "id": "c86176054e69ea2cca4382be5326f79825792e89733516df7d7e64219ed76ace"
       }
     ],
-    "items_30d": 5,
-    "items_last_run": 16,
-    "last_check": "2026-11-05T00:34:32.653083+00:00",
+    "items_30d": 6,
+    "items_last_run": 17,
+    "last_check": "2026-11-09T13:36:36.454167+00:00",
     "last_error": null,
     "last_error_at": null,
     "last_modified": null,
-    "last_success": "2026-11-05T00:34:32.653083+00:00",
-    "newest_item_at": "2026-11-03T20:14:15+00:00",
+    "last_success": "2026-11-09T13:36:36.454167+00:00",
+    "newest_item_at": "2026-11-07T17:42:49+00:00",
     "resolved_feed_url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=copilot-studio-blog",
     "suspended_since": null
   }
