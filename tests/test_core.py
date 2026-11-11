@@ -12,7 +12,7 @@ from digest.ai.weekly_summary import weekly_summary
 from digest.cli import export_opml, run_digest
 from digest.collectors.page_diff import PageDiffCollector
 from digest.collectors.rss import parse_content
-from digest.models import EnrichedItem, Item, Source, SourceResult
+from digest.models import EnrichedItem, Item, ManagementSummaryItem, Source, SourceResult
 from digest.pipeline.dedupe import canonical_url, deduplicate, item_id
 from digest.registry import load_sources, validate_schema
 from digest.registry_ops import append_source, parse_issue_body, source_entry
@@ -302,7 +302,7 @@ def test_render_escapes_untrusted_source_text() -> None:
     html = render(
         title="Digest",
         iso_week="2026-W45",
-        management_summary=["safe"],
+        management_summary=[ManagementSummaryItem(text="safe", item_ids=[item.id])],
         calls_to_action=[
             CallToAction(title="Review", why="Because", item_ids=[]) for _ in range(3)
         ],
@@ -332,7 +332,12 @@ def test_weekly_summary_filters_unknown_ids_and_generated_urls() -> None:
 
         async def json_completion(self, system, user):
             return {
-                "management_summary": [f"Review https://invented.test {('b' * 64)}"],
+                "management_summary": [
+                    {
+                        "text": f"Review https://invented.test {('b' * 64)}",
+                        "item_ids": [("b" * 64), ("a" * 64)],
+                    }
+                ],
                 "calls_to_action": [
                     {
                         "title": "Investigate",
@@ -343,8 +348,9 @@ def test_weekly_summary_filters_unknown_ids_and_generated_urls() -> None:
             }
 
     summary, actions = asyncio.run(weekly_summary([enriched], FakeAI()))
-    assert "https://invented.test" not in summary[0]
-    assert "unknown item" in summary[0]
+    assert "https://invented.test" not in summary[0].text
+    assert "unknown item" in summary[0].text
+    assert summary[0].item_ids == ["a" * 64]
     assert actions[0].item_ids == ["a" * 64]
     assert "https://invented.test" not in actions[0].why
 
@@ -433,7 +439,9 @@ def test_weekly_summary_uses_valid_ai_response(caplog) -> None:
     items = [_enriched(n) for n in range(1, 4)]
     ai = _ScriptedAI(
         {
-            "management_summary": ["Big <b>news</b>"],
+            "management_summary": [
+                {"text": "Big <b>news</b>", "item_ids": [items[0].id]}
+            ],
             "calls_to_action": [
                 {"title": f"Act {n}", "why": "Because", "item_ids": [items[n - 1].id, "bogus"]}
                 for n in range(1, 4)
@@ -441,7 +449,7 @@ def test_weekly_summary_uses_valid_ai_response(caplog) -> None:
         }
     )
     summary, actions = asyncio.run(weekly_summary(items, ai))
-    assert summary == ["Big news"]
+    assert summary == [ManagementSummaryItem(text="Big news", item_ids=[items[0].id])]
     assert [a.title for a in actions] == ["Act 1", "Act 2", "Act 3"]
     assert all(len(a.item_ids) == 1 for a in actions)
     assert "raw AI response" in caplog.text
@@ -452,6 +460,7 @@ def test_weekly_summary_tops_up_actions_from_items_and_logs(caplog) -> None:
     ai = _ScriptedAI({"management_summary": [], "calls_to_action": "not a list"})
     summary, actions = asyncio.run(weekly_summary(items, ai))
     assert len(summary) == 3
+    assert summary[0].item_ids == [items[0].id]
     assert [a.title for a in actions] == ["Review: Title 1", "Review: Title 2", "Review: Title 3"]
     assert "expected a list" in caplog.text
     assert "0 calls to action" in caplog.text
@@ -531,7 +540,9 @@ def test_render_collapses_sections_except_summary_and_actions() -> None:
     html = render(
         title="T",
         iso_week="2026-W45",
-        management_summary=["Line"],
+        management_summary=[
+            ManagementSummaryItem(text="Line", item_ids=[_enriched(1).id])
+        ],
         calls_to_action=[],
         sections={"AI": [_enriched(1)]},
         failed_sources=[],
@@ -540,3 +551,4 @@ def test_render_collapses_sections_except_summary_and_actions() -> None:
     assert '<details class="section" open><summary><h2>Management summary' in html
     assert '<details class="section" open><summary><h2>Calls to action' in html
     assert '<details class="section"><summary><h2>AI <span class="count">1</span>' in html
+    assert '<a href="https://example.test/1">Title 1</a>' in html

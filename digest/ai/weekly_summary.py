@@ -9,7 +9,7 @@ from openai import OpenAIError
 
 from digest.ai.client import DigestAI
 from digest.ai.sanitize import sanitize_text
-from digest.models import CallToAction, EnrichedItem
+from digest.models import CallToAction, EnrichedItem, ManagementSummaryItem
 
 logger = logging.getLogger(__name__)
 
@@ -19,8 +19,14 @@ SYSTEM_PROMPT = (Path(__file__).parent / "prompts" / "weekly_summary.md").read_t
 MIN_ACTIONS = 3
 
 
-def _fallback_summary(relevant: list[EnrichedItem], valid_ids: set[str] | None) -> list[str]:
-    return [sanitize_text(f"{item.title}: {item.ai_summary}", valid_ids) for item in relevant[:7]]
+def _fallback_summary(relevant: list[EnrichedItem]) -> list[ManagementSummaryItem]:
+    return [
+        ManagementSummaryItem(
+            text=sanitize_text(f"{item.title}: {item.ai_summary}"),
+            item_ids=[item.id],
+        )
+        for item in relevant[:7]
+    ]
 
 
 def _fallback_actions(relevant: list[EnrichedItem]) -> list[CallToAction]:
@@ -36,7 +42,7 @@ def _fallback_actions(relevant: list[EnrichedItem]) -> list[CallToAction]:
 
 def _parse_result(
     result: dict[str, Any], valid_ids: set[str]
-) -> tuple[list[str], list[CallToAction]]:
+) -> tuple[list[ManagementSummaryItem], list[CallToAction]]:
     logger.warning("Weekly summary response keys: %s", sorted(result))
     summary_values = result.get("management_summary", [])
     if not isinstance(summary_values, list):
@@ -45,7 +51,28 @@ def _parse_result(
             type(summary_values).__name__,
         )
         summary_values = []
-    summary = [text for value in summary_values if (text := sanitize_text(str(value), valid_ids))]
+    summary: list[ManagementSummaryItem] = []
+    for index, value in enumerate(summary_values[:7]):
+        if not isinstance(value, dict):
+            logger.warning("Weekly summary item %d dropped: not an object", index)
+            continue
+        raw_ids = value.get("item_ids", [])
+        item_ids = [str(item_id) for item_id in raw_ids] if isinstance(raw_ids, list) else []
+        ids = list(dict.fromkeys(item_id for item_id in item_ids if item_id in valid_ids))
+        if len(ids) != len(item_ids):
+            logger.warning(
+                "Weekly summary item %d: dropped %d unknown item ids",
+                index,
+                len(item_ids) - len(ids),
+            )
+        text = sanitize_text(str(value.get("text", "")), valid_ids)
+        if not text:
+            logger.warning("Weekly summary item %d dropped: empty text", index)
+            continue
+        if not ids:
+            logger.warning("Weekly summary item %d dropped: no valid item ids", index)
+            continue
+        summary.append(ManagementSummaryItem(text=text, item_ids=ids))
     action_values = result.get("calls_to_action", [])
     if not isinstance(action_values, list):
         logger.warning(
@@ -92,12 +119,12 @@ async def weekly_summary(
         "enabled" if ai._client is not None else "disabled (deterministic fallback)",
     )
     valid_ids = {item.id for item in relevant}
-    summary: list[str] = []
+    summary: list[ManagementSummaryItem] = []
     actions: list[CallToAction] = []
     if not relevant:
         logger.warning("Weekly summary skipped: no relevant items this run; using placeholders")
     elif ai._client is None:
-        summary = _fallback_summary(relevant, None)
+        summary = _fallback_summary(relevant)
         actions = _fallback_actions(relevant)
     else:
         payload = {
@@ -124,7 +151,7 @@ async def weekly_summary(
         summary, actions = _parse_result(result, valid_ids)
         if not summary:
             logger.warning("Weekly summary has no management summary; using item summaries")
-            summary = _fallback_summary(relevant, valid_ids)
+            summary = _fallback_summary(relevant)
     if len(actions) < MIN_ACTIONS and relevant:
         logger.warning(
             "Weekly summary has %d calls to action (expected at least %d); "
