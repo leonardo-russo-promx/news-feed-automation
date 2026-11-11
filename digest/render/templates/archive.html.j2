@@ -2,7 +2,7 @@
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{ title }}</title><link rel="stylesheet" href="style.css"></head><body>
 <p><a href="index.html">&larr; All weeks</a></p>
 <h1>{{ title }}</h1><p>Week {{ iso_week }}</p>
-<details class="section" open><summary><h2>Management summary</h2></summary><ul>{% for line in management_summary %}<li>{{ line }}</li>{% endfor %}</ul></details>
+<details class="section" open><summary><h2>Management summary</h2></summary><ul>{% for line in management_summary %}<li>{{ line.text }}{% if line.sources %} <span class="summary-links">| Source: {% for item in line.sources %}{% if not loop.first %}, {% endif %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}</span>{% endif %}</li>{% endfor %}</ul></details>
 <details class="section" open><summary><h2>Calls to action</h2></summary><ul>{% for action in calls_to_action %}<li><strong>{{ action.title }}</strong> — {{ action.why }}</li>{% endfor %}</ul></details>
 {% for area, items in sections.items() %}<details class="section"><summary><h2>{{ area }} <span class="count">{{ items|length }}</span></h2></summary>{% for item in items %}
 <article><h3><a href="{{ item.url }}">{{ item.title }}</a></h3><p>{{ item.ai_summary }}</p>

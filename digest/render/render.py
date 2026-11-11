@@ -7,7 +7,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from digest.models import CallToAction, EnrichedItem
+from digest.models import CallToAction, EnrichedItem, ManagementSummaryItem
 
 TEMPLATE_DIR = Path(__file__).parent / "templates"
 WEEK_FILE = re.compile(r"^\d{4}-W\d{2}\.html$")
@@ -24,7 +24,7 @@ def render(
     *,
     title: str,
     iso_week: str,
-    management_summary: list[str],
+    management_summary: list[ManagementSummaryItem],
     calls_to_action: list[CallToAction],
     sections: dict[str, list[EnrichedItem]],
     failed_sources: list[str],
@@ -41,10 +41,22 @@ def render(
     sections = {
         area: sorted(values, key=lambda item: order[item.id]) for area, values in sections.items()
     }
+    items_by_id = {item.id: item for item in items}
+    summary = [
+        {
+            "text": line.text,
+            "sources": [
+                {"title": items_by_id[item_id].title, "url": items_by_id[item_id].url}
+                for item_id in line.item_ids
+                if item_id in items_by_id
+            ],
+        }
+        for line in management_summary
+    ]
     return template.render(
         title=title,
         iso_week=iso_week,
-        management_summary=management_summary,
+        management_summary=summary,
         calls_to_action=calls_to_action,
         sections=sections,
         failed_sources=failed_sources,

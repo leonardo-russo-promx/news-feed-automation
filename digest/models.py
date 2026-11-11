@@ -125,11 +125,16 @@ class CallToAction(BaseModel):
     item_ids: list[str] = Field(default_factory=list)
 
 
+class ManagementSummaryItem(BaseModel):
+    text: str
+    item_ids: list[str] = Field(default_factory=list)
+
+
 class Digest(BaseModel):
     iso_week: str
     period_start: date
     period_end: date
-    management_summary: list[str] = Field(default_factory=list, max_length=7)
+    management_summary: list[ManagementSummaryItem] = Field(default_factory=list, max_length=7)
     calls_to_action: list[CallToAction] = Field(default_factory=list, min_length=3, max_length=5)
     sections: dict[str, list[EnrichedItem]] = Field(default_factory=dict)
     stats: dict[str, int] = Field(default_factory=dict)
