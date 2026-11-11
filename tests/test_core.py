@@ -146,6 +146,19 @@ def test_dry_run_uses_fixtures_without_writing_state_or_archive(
 
     assert result == 0
     assert (tmp_path / "out/archive.html").is_file()
+    archive_html = (tmp_path / "out/archive.html").read_text(encoding="utf-8")
+    assert "Management summary" in archive_html
+    assert (
+        '<a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new">'
+        "Sample Copilot Studio update</a>"
+    ) in archive_html
+    assert (
+        '<a href="https://devblogs.microsoft.com/foundry/">Sample Foundry update</a>'
+    ) in archive_html
+    assert (
+        '<a href="https://www.microsoft.com/en-us/dynamics-365/blog/">'
+        "Sample Dynamics update</a>"
+    ) in archive_html
     assert (tmp_path / "out/run.json").is_file()
     assert not (tmp_path / "state").exists()
     assert not (tmp_path / "archive").exists()

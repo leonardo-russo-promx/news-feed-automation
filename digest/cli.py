@@ -47,12 +47,17 @@ def _week_bounds(value: str | None) -> tuple[str, date, date]:
     return week, monday, monday + timedelta(days=6)
 
 
-def _fixture_items() -> list[Item]:
+def _fixture_items(reference_time: datetime) -> list[Item]:
     path = Path("tests/fixtures/items.json")
     if not path.exists():
         return []
     values = json.loads(path.read_text(encoding="utf-8"))
-    return [Item.model_validate(value) for value in values]
+    recent_at = reference_time - timedelta(days=1)
+    items = [Item.model_validate(value) for value in values]
+    return [
+        item.model_copy(update={"published_at": recent_at, "updated_at": recent_at})
+        for item in items
+    ]
 
 
 def _write_source_status(sources, health: dict) -> None:
@@ -189,7 +194,7 @@ async def run_digest(
         return 0
 
     if dry_run:
-        items = _fixture_items()
+        items = _fixture_items(now)
         results = [
             SourceResult(source_id=source.id, status="skipped", error="fixture-only dry-run")
             for source in sources
