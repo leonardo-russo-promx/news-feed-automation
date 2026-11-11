@@ -45,6 +45,14 @@ sources:
     website_url: https://www.microsoft.com/en-us/power-platform/blog/
     area: Power Platform
     enabled: true
+  - id: ppweekly
+    title: Power Platform Weekly
+    method: rss
+    feed_url: https://www.ppweekly.com/feed
+    website_url: https://www.ppweekly.com/
+    area: Power Platform
+    enabled: true
+    notes: "Substack newsletter by Carina M. Claesson; weekly issues."
   - id: tc-copilot-blog
     title: Microsoft Copilot Blog (Tech Community)
     method: rss
