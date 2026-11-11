@@ -149,16 +149,11 @@ def test_dry_run_uses_fixtures_without_writing_state_or_archive(
     archive_html = (tmp_path / "out/archive.html").read_text(encoding="utf-8")
     assert "Management summary" in archive_html
     assert (
-        '<a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new">'
-        "Sample Copilot Studio update</a>"
+        '<a class="summary-source" href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"'
+        ' title="Sample Copilot Studio update"'
     ) in archive_html
-    assert (
-        '<a href="https://devblogs.microsoft.com/foundry/">Sample Foundry update</a>'
-    ) in archive_html
-    assert (
-        '<a href="https://www.microsoft.com/en-us/dynamics-365/blog/">'
-        "Sample Dynamics update</a>"
-    ) in archive_html
+    assert '<span class="summary-source-title">Sample Foundry update</span>' in archive_html
+    assert '<span class="summary-source-title">Sample Dynamics update</span>' in archive_html
     assert (tmp_path / "out/run.json").is_file()
     assert not (tmp_path / "state").exists()
     assert not (tmp_path / "archive").exists()
@@ -564,4 +559,33 @@ def test_render_collapses_sections_except_summary_and_actions() -> None:
     assert '<details class="section" open><summary><h2>Management summary' in html
     assert '<details class="section" open><summary><h2>Calls to action' in html
     assert '<details class="section"><summary><h2>AI <span class="count">1</span>' in html
-    assert '<a href="https://example.test/1">Title 1</a>' in html
+    assert (
+        '<a class="summary-source" href="https://example.test/1" title="Title 1" '
+        'aria-label="S: Title 1"><span class="summary-source-publisher">S</span>'
+        '<span class="summary-source-title">Title 1</span></a>'
+    ) in html
+
+
+def test_render_collapses_summary_sources_after_three() -> None:
+    items = [_enriched(n) for n in range(1, 5)]
+    html = render(
+        title="T",
+        iso_week="2026-W45",
+        management_summary=[
+            ManagementSummaryItem(
+                text="Insight first.", item_ids=[item.id for item in items]
+            )
+        ],
+        calls_to_action=[],
+        sections={"AI": items},
+        failed_sources=[],
+    )
+
+    summary_html = html.split('<details class="section" open><summary><h2>Calls to action', 1)[0]
+    disclosure = summary_html.index('<details class="summary-more">')
+    assert summary_html.count('class="summary-source"') == 4
+    assert summary_html.index("<p>Insight first.</p>") < summary_html.index("Sources · 4")
+    assert summary_html.index('title="Title 3"') < disclosure
+    assert summary_html.index('title="Title 4"') > disclosure
+    assert '<summary><span class="summary-more-count">+1 more</span>' in summary_html
+    assert 'aria-label="S: Title 4"' in summary_html
