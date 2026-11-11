@@ -46,7 +46,11 @@ def render(
         {
             "text": line.text,
             "sources": [
-                {"title": items_by_id[item_id].title, "url": items_by_id[item_id].url}
+                {
+                    "title": items_by_id[item_id].title,
+                    "source_title": items_by_id[item_id].source_title,
+                    "url": items_by_id[item_id].url,
+                }
                 for item_id in line.item_ids
                 if item_id in items_by_id
             ],
